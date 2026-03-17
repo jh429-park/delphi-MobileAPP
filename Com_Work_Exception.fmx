@@ -1,0 +1,294 @@
+object frmCom_Work_Exception: TfrmCom_Work_Exception
+  Left = 0
+  Top = 0
+  Caption = #52264#47049#48176#52264#54788#54889
+  ClientHeight = 607
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Align = MostTop
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 374.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      Text = #50672#51109#44540#47924' '#51076#51032#51077#47141
+      TabOrder = 0
+    end
+    object btnClose: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 1
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+  end
+  object Layout_Combo: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 404.000000000000000000
+    Size.Height = 129.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 1
+  end
+  object Layout_Detail: TLayout
+    Align = Top
+    Margins.Left = 3.000000000000000000
+    Margins.Top = 30.000000000000000000
+    Margins.Right = 3.000000000000000000
+    Margins.Bottom = 3.000000000000000000
+    Position.X = 3.000000000000000000
+    Position.Y = 78.000000000000000000
+    Size.Width = 378.000000000000000000
+    Size.Height = 207.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Layout3: TLayout
+      Align = Left
+      Size.Width = 76.000000000000000000
+      Size.Height = 159.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Label2: TLabel
+        Align = MostTop
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 76.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #49548#49549#54924#49324
+        TabOrder = 8
+      end
+      object Label3: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 128.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #49324'      '#50976
+        TabOrder = 6
+      end
+      object Label5: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 64.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #49884#51089#51068#49884
+        TabOrder = 5
+      end
+      object Label6: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 32.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #49888' '#52397' '#51088
+        TabOrder = 7
+      end
+      object Label9: TLabel
+        Align = Top
+        StyledSettings = [Family, Style, FontColor]
+        Position.Y = 96.000000000000000000
+        Size.Width = 76.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.HorzAlign = Center
+        Text = #51333#47308#51068#49884
+        TabOrder = 4
+      end
+    end
+    object Layout_Data: TLayout
+      Align = Client
+      Size.Width = 302.000000000000000000
+      Size.Height = 159.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Layout4: TLayout
+        Align = Top
+        Position.Y = 66.000000000000000000
+        Size.Width = 302.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object edtDateFr: TDateEdit
+          Date = 43753.000000000000000000
+          DateFormatKind = Long
+          Align = Client
+          Size.Width = 202.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object edtTimeFr: TTimeEdit
+          Time = 0.475753240740740800
+          Align = Right
+          Position.X = 202.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+      object Layout5: TLayout
+        Align = Top
+        Position.Y = 96.000000000000000000
+        Size.Width = 302.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtDateTo: TDateEdit
+          Date = 43753.000000000000000000
+          DateFormatKind = Long
+          Align = Client
+          Size.Width = 202.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object edtTimeTo: TTimeEdit
+          Time = 0.475753240740740800
+          Align = Right
+          Position.X = 202.000000000000000000
+          Size.Width = 100.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+      object cboCompany: TComboBox
+        Align = Top
+        Margins.Left = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 297.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+      end
+      object Layout1: TLayout
+        Align = Top
+        Position.Y = 32.000000000000000000
+        Size.Width = 302.000000000000000000
+        Size.Height = 34.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object edtNo_Emp: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 5
+          Position.X = 64.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 97.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object Label11: TLabel
+          Align = MostLeft
+          StyledSettings = [Family, Style, FontColor]
+          Size.Width = 64.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 13.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = #49324#48264
+          TabOrder = 13
+        end
+        object Label12: TLabel
+          Align = Left
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 161.000000000000000000
+          Size.Width = 64.000000000000000000
+          Size.Height = 34.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 13.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = #49457#47749
+          TabOrder = 12
+        end
+        object edtNm_Kor: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = MostRight
+          TabOrder = 4
+          ReadOnly = True
+          Position.X = 205.000000000000000000
+          Position.Y = 1.000000000000000000
+          Enabled = False
+          Size.Width = 97.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+      object edtMemo: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 2
+        Size.Width = 302.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Layout_Ok: TLayout
+      Align = MostBottom
+      Position.Y = 159.000000000000000000
+      Size.Width = 378.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Button_Save: TButton
+        Align = Client
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 378.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = #51200#51109
+        TextSettings.Font.Size = 13.000000000000000000
+        OnClick = Button_SaveClick
+      end
+    end
+  end
+  object Text_Key: TText
+    Align = Bottom
+    Position.Y = 584.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

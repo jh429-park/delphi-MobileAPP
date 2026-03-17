@@ -1,0 +1,168 @@
+object frmCom_WebBrowser: TfrmCom_WebBrowser
+  Left = 0
+  Top = 0
+  Caption = 'Web Browser'
+  ClientHeight = 569
+  ClientWidth = 398
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  OnShow = FormShow
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Size.Width = 398.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 388.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      Text = 'Sara '
+      TabOrder = 1
+      OnClick = Label_TitleClick
+    end
+    object btnClose: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 45.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      OnClick = btnCloseClick
+    end
+  end
+  object ToolBar_Bottom: TToolBar
+    Align = MostBottom
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Position.Y = 521.000000000000000000
+    Size.Width = 398.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnGoBack: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowlefttoolbutton'
+      TabOrder = 1
+      OnClick = btnGoBackClick
+    end
+    object btnGoForward: TButton
+      Align = MostRight
+      Margins.Left = 10.000000000000000000
+      Position.X = 340.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'arrowrighttoolbutton'
+      TabOrder = 0
+      OnClick = btnGoForwardClick
+    end
+    object sbtRch_Building: TSpeedButton
+      Align = Left
+      StyledSettings = [Family, Size]
+      HelpType = htKeyword
+      Hint = #50724#54588#49828'DB '#48716#46377#51221#48372
+      Images = frmMainMenu.ImageList_MainMenu
+      ImageIndex = 10
+      Position.X = 58.000000000000000000
+      Size.Width = 151.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #50724#54588#49828'DB '#48716#46377#51221#48372
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claDarkcyan
+      TextSettings.HorzAlign = Leading
+      OnClick = sbtRch_BuildingClick
+    end
+    object sbtUpdate: TSpeedButton
+      Align = Right
+      StyledSettings = [Family, Size]
+      HelpType = htKeyword
+      Hint = #50724#54588#49828'DB '#48716#46377#51221#48372
+      Images = frmMainMenu.ImageList_MainMenu
+      ImageIndex = 39
+      Position.X = 246.000000000000000000
+      Size.Width = 84.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = #49325#51228
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      TextSettings.FontColor = claDarkcyan
+      TextSettings.HorzAlign = Leading
+      OnClick = sbtUpdateClick
+    end
+    object Button1: TButton
+      Position.X = 200.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Button1'
+      Visible = False
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 26.000000000000000000
+      Size.Width = 41.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = 'Button2'
+      Visible = False
+      OnClick = Button2Click
+    end
+  end
+  object VertScrollBox1: TVertScrollBox
+    Align = Client
+    Size.Width = 398.000000000000000000
+    Size.Height = 473.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnCalcContentBounds = VertScrollBox1CalcContentBounds
+    Viewport.Width = 398.000000000000000000
+    Viewport.Height = 473.000000000000000000
+    object MainLayout1: TLayout
+      Align = Client
+      Size.Width = 398.000000000000000000
+      Size.Height = 473.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object WebBrowser: TWebBrowser
+        Align = Client
+        Size.Width = 398.000000000000000000
+        Size.Height = 469.000000000000000000
+        Size.PlatformDefault = False
+        Margins.Top = 2.000000000000000000
+        Margins.Bottom = 2.000000000000000000
+        OnDidStartLoad = WebBrowserDidStartLoad
+        OnDidFinishLoad = WebBrowserDidFinishLoad
+      end
+    end
+  end
+end

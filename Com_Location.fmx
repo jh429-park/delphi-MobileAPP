@@ -1,0 +1,105 @@
+object frmCom_Location: TfrmCom_Location
+  Left = 0
+  Top = 0
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 1920
+  FormFactor.Height = 1022
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object ToolBar1: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label_Title: TLabel
+      Align = Client
+      Size.Width = 287.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+      Text = 'Location'
+    end
+    object MenuButton: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = MenuButtonClick
+    end
+    object Switch_LocationSensor: TSwitch
+      Align = Right
+      IsChecked = False
+      Margins.Right = 5.000000000000000000
+      Position.X = 335.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      TouchTargetExpansion.Left = 6.000000000000000000
+      TouchTargetExpansion.Top = 6.000000000000000000
+      TouchTargetExpansion.Right = 6.000000000000000000
+      TouchTargetExpansion.Bottom = 6.000000000000000000
+    end
+  end
+  object WebBrowser1: TWebBrowser
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 469.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Layout1: TLayout
+    Align = Bottom
+    Position.Y = 517.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object swLoadView: TSwitch
+      Align = Left
+      IsChecked = False
+      Margins.Right = 5.000000000000000000
+      Position.Y = 12.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      TouchTargetExpansion.Left = 6.000000000000000000
+      TouchTargetExpansion.Top = 6.000000000000000000
+      TouchTargetExpansion.Right = 6.000000000000000000
+      TouchTargetExpansion.Bottom = 6.000000000000000000
+    end
+    object Text_Address: TText
+      Align = Client
+      Size.Width = 335.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      object Text_LatLong: TText
+        Align = Bottom
+        Position.Y = 34.000000000000000000
+        Size.Width = 335.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 9.000000000000000000
+        TextSettings.FontColor = claGray
+      end
+    end
+  end
+  object Timer_Save: TTimer
+    Enabled = False
+    Interval = 10000
+    Left = 64
+    Top = 211
+  end
+  object LocationSensor1: TLocationSensor
+    Left = 184
+    Top = 256
+  end
+end

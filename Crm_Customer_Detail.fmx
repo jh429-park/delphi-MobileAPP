@@ -1,0 +1,172 @@
+object frmCrm_Customer_Detail: TfrmCrm_Customer_Detail
+  Left = 0
+  Top = 0
+  Caption = #44256#44061#51221#48372
+  ClientHeight = 589
+  ClientWidth = 357
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Align = MostTop
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 357.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 347.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      Text = #44256#44061#51221#48372
+      TabOrder = 2
+    end
+    object btnClose: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      OnClick = btnCloseClick
+    end
+    object btnQuery: TButton
+      Align = Right
+      Position.X = 299.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 1
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+  end
+  object TabControl1: TTabControl
+    Align = Top
+    Position.Y = 225.000000000000000000
+    Size.Width = 357.000000000000000000
+    Size.Height = 51.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 0
+    TabOrder = 3
+    TabPosition = PlatformDefault
+    OnChange = TabControl1Change
+    Sizes = (
+      357s
+      2s
+      357s
+      2s
+      357s
+      2s
+      357s
+      2s)
+    object TabItem_EmpList: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 89.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #49324#45236#51648#51064
+      ExplicitSize.cx = 119.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem_Contact: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 89.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #52968#53469
+      ExplicitSize.cx = 119.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem_Project: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 89.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #54532#47196#51229#53944
+      ExplicitSize.cx = 89.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+    object TabItem_Update: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 90.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = #49688#51221#51060#47141
+      ExplicitSize.cx = 119.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+    end
+  end
+  object ListView_Detail: TListView
+    ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+    ItemEditAppearanceClassName = 'TEmptyItemObjects'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 357.000000000000000000
+    Size.Height = 177.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    ItemAppearanceObjects.ItemObjects.Image.Visible = False
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TImageListItemAppearance'
+    ItemEditAppearanceClassName = 'TImageListItemDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 357.000000000000000000
+    Size.Height = 313.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearance.ItemHeight = 30
+    ItemAppearance.ItemEditHeight = 30
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Client
+    Size.Width = 357.000000000000000000
+    Size.Height = 313.000000000000000000
+    Size.PlatformDefault = False
+  end
+end

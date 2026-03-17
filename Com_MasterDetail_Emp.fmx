@@ -1,0 +1,342 @@
+object frmCom_MasterDetail_Emp: TfrmCom_MasterDetail_Emp
+  Left = 0
+  Top = 0
+  Caption = 'frmCom_MasterDetail01'
+  ClientHeight = 637
+  ClientWidth = 385
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Size.Width = 385.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnQuery: TButton
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 337.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 1
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Client
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 259.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 2
+    end
+    object btnClose: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      OnClick = btnCloseClick
+    end
+  end
+  object Layout_Master: TLayout
+    Align = Client
+    Size.Width = 385.000000000000000000
+    Size.Height = 282.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object ListView_EmpList: TListView
+      ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+      ItemEditAppearanceClassName = 'TEmptyItemObjects'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 385.000000000000000000
+      Size.Height = 282.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ItemAppearanceObjects.FooterObjects.Text.Width = 49.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 142.000000000000000000
+      CanSwipeDelete = False
+      OnItemClick = ListView_EmpListItemClick
+      ControlType = Platform
+    end
+  end
+  object MViewport3D: TViewport3D
+    Align = Bottom
+    Camera = Camera
+    Color = xFF090909
+    Position.Y = 429.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 208.000000000000000000
+    Size.PlatformDefault = False
+    UsingDesignCamera = False
+    object Grid3D: TGrid3D
+      Marks = 4.000000000000000000
+      Frequency = 2.000000000000000000
+      LineColor = x50505050
+      Position.X = -0.124598979949951200
+      Position.Y = 2.623727798461914000
+      RotationAngle.X = 90.000000000000000000
+      Width = 30.000000000000000000
+      Height = 20.000000000000000000
+      Depth = 0.001000000047497451
+      HitTest = False
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    object Camera: TCamera
+      AngleOfView = 45.000000000000000000
+      Position.Y = -4.000000000000000000
+      Position.Z = -15.000000000000000000
+      Width = 1.000000000000000000
+      Height = 1.000000000000000000
+      Depth = 1.000000000000000000
+    end
+    object Layout_SlideButton: TLayout
+      Align = Bottom
+      Position.Y = 165.000000000000000000
+      Size.Width = 385.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object sbtLeft: TSpeedButton
+        Action = Action_Left
+        Align = MostLeft
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 48.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'playtoolbutton'
+      end
+      object sbtRight: TSpeedButton
+        Action = Action_Right
+        Align = MostRight
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 289.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'playtoolbutton'
+      end
+      object sbtRight_Auto: TSpeedButton
+        Action = Action_Right_Auto
+        Align = MostRight
+        Enabled = True
+        ImageIndex = -1
+        Position.X = 337.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'forwardtoolbutton'
+      end
+      object sbtLeft_Auto: TSpeedButton
+        Action = Action_Left_Auto
+        Align = MostLeft
+        Enabled = True
+        ImageIndex = -1
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'rewindtoolbutton'
+      end
+      object sbtPause: TSpeedButton
+        Align = Center
+        Size.Width = 48.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'pausetoolbutton'
+        Text = 'Right_SB'
+        OnClick = sbtPauseClick
+      end
+    end
+    object Timer_Rotation: TTimer
+      Enabled = False
+      Interval = 2000
+      OnTimer = Timer_RotationTimer
+      Left = 32
+      Top = 110
+    end
+    object Text_ImageName: TText
+      Align = Top
+      Size.Width = 385.000000000000000000
+      Size.Height = 45.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claChartreuse
+      TextSettings.HorzAlign = Leading
+      OnClick = sbtPauseClick
+    end
+  end
+  object Timer_Query: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = Timer_QueryTimer
+    Left = 104
+    Top = 104
+  end
+  object AniIndicator1: TAniIndicator
+    Enabled = True
+    Position.X = 106.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 111.000000000000000000
+    Size.Height = 225.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Layout_Date: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 34.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Text_Date: TText
+      Align = Left
+      Size.Width = 100.000000000000000000
+      Size.Height = 34.000000000000000000
+      Size.PlatformDefault = False
+      Text = #51068#51088
+      TextSettings.FontColor = claGray
+    end
+    object edtDate: TDateEdit
+      Date = 43753.000000000000000000
+      Format = 'YYYY-MM-DD (DDD)'
+      DateFormatKind = Long
+      OnClosePicker = edtDateClosePicker
+      Align = Left
+      Position.X = 100.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Style, FontColor]
+      TabOrder = 2
+      TextSettings.Font.Size = 15.000000000000000000
+    end
+  end
+  object Layout_Keyword: TLayout
+    Align = Top
+    Position.Y = 114.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 13
+    object Label1: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 100.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #44160#49353
+      TabOrder = 0
+    end
+    object edtKeyword: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claDodgerblue
+      HelpType = htKeyword
+      Size.Width = 285.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = #44160#49353#50612#47484' '#51077#47141#54616#49464#50836
+      StyledSettings = [Family, Style]
+      ParentShowHint = False
+      ShowHint = False
+    end
+  end
+  object Layout_Dept: TLayout
+    Align = Top
+    Position.Y = 82.000000000000000000
+    Size.Width = 385.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object TxtDept: TText
+      Align = Left
+      Size.Width = 100.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      Text = #48512#49436
+      TextSettings.FontColor = claGray
+    end
+    object ComboBox_DeptCode: TComboBox
+      Align = Right
+      Position.X = 208.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Visible = False
+    end
+    object ComboBox_DeptName: TComboBox
+      Align = Left
+      Position.X = 100.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = ComboBox_DeptNameChange
+    end
+    object cbxPicture: TCheckBox
+      Align = Right
+      Margins.Left = 10.000000000000000000
+      Position.X = 320.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = #49324#51652
+      Visible = False
+    end
+  end
+  object ActionList1: TActionList
+    Left = 106
+    Top = 176
+    object Action_Left: TAction
+      Text = 'Action_Left'
+      OnExecute = Action_LeftExecute
+    end
+    object Action_Left_Auto: TAction
+      Text = 'Action_Left_Auto'
+      OnExecute = Action_Left_AutoExecute
+    end
+    object Action_Right: TAction
+      Text = 'Action_Right'
+      OnExecute = Action_RightExecute
+    end
+    object Action_Right_Auto: TAction
+      Text = 'Action_Right_Auto'
+      OnExecute = Action_Right_AutoExecute
+    end
+  end
+end

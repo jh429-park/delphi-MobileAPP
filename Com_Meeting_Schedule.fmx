@@ -1,0 +1,798 @@
+object frmCom_Meeting_Schedule: TfrmCom_Meeting_Schedule
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 641
+  ClientWidth = 841
+  StyleLookup = 'panelstyle'
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 32
+    Top = 232
+  end
+  object HeaderToolBar: TToolBar
+    Align = MostTop
+    Size.Width = 841.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnQuery: TButton
+      Align = Right
+      Margins.Right = 10.000000000000000000
+      Position.X = 783.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 831.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+    object btnClose: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+  end
+  object Layout_Timer: TLayout
+    Position.X = 16.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 353.000000000000000000
+    Size.Height = 521.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object TMSFMXClock1: TTMSFMXClock
+      Align = Center
+      DisableFocusEffect = False
+      TabOrder = 0
+      Size.Width = 250.000000000000000000
+      Size.Height = 250.000000000000000000
+      Size.PlatformDefault = False
+      Active = True
+      Interval = 0
+      ClockTime = 0.696681307870370400
+    end
+    object Layout_Schedule: TLayout
+      Align = MostBottom
+      Position.Y = 270.000000000000000000
+      Size.Width = 353.000000000000000000
+      Size.Height = 251.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      object Layout1: TLayout
+        Align = Center
+        Size.Width = 353.000000000000000000
+        Size.Height = 278.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Layout_TimeJan: TLayout
+          Align = Center
+          Margins.Top = 10.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Size.Width = 326.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object Led11: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = Right
+            Position.X = 3.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Led32: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = MostRight
+            Position.X = 283.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Margins.Left = 5.000000000000000000
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Led31: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = Right
+            Position.X = 235.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Led22: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = Right
+            Position.X = 167.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Margins.Left = 5.000000000000000000
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Led21: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = Right
+            Position.X = 119.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Led12: TTMSFMX7SegLEDShape
+            StyleName = 'FMXLed0'
+            Align = Right
+            Position.X = 51.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            Fill.Color = xFFEFEFEF
+            Locked = True
+            HitTest = False
+            Margins.Left = 5.000000000000000000
+            Stroke.Thickness = 0.000000000000000000
+            FillActive.Color = claOlivedrab
+            Value = 0
+          end
+          object Lbl10: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Position.X = 94.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 50.000000000000000000
+            TextSettings.FontColor = claOlivedrab
+            TextSettings.HorzAlign = Center
+            Text = ':'
+            TabOrder = 8
+          end
+          object Lbl20: TLabel
+            Align = Right
+            StyledSettings = [Family, Style]
+            Position.X = 210.000000000000000000
+            Size.Width = 25.000000000000000000
+            Size.Height = 73.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 50.000000000000000000
+            TextSettings.FontColor = claOlivedrab
+            TextSettings.HorzAlign = Center
+            Text = ':'
+            TabOrder = 7
+          end
+        end
+        object Layout8: TLayout
+          Align = MostTop
+          Size.Width = 353.000000000000000000
+          Size.Height = 115.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 10
+          object Label_MeetingRoom: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 103.000000000000000000
+            Size.Width = 333.000000000000000000
+            Size.Height = 28.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claOlive
+            Text = #51109#49548
+            TabOrder = 3
+          end
+          object Label_MeetingTime: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 75.000000000000000000
+            Size.Width = 333.000000000000000000
+            Size.Height = 28.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claOlive
+            Text = #54924#51032#49884#44036
+            TabOrder = 1
+          end
+          object Label_MeetingMemo: TLabel
+            Align = Top
+            StyledSettings = [Family]
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 131.000000000000000000
+            Size.Width = 333.000000000000000000
+            Size.Height = 28.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claOlive
+            Text = #52280#49437#45824#49345
+            TabOrder = 2
+          end
+          object Label_MeetingTitle: TLabel
+            Align = MostTop
+            StyledSettings = [Family]
+            Margins.Left = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Size.Width = 333.000000000000000000
+            Size.Height = 38.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = 'toollabel'
+            TextSettings.Font.Size = 23.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.FontColor = claOlivedrab
+            Text = #48120#54021#51228#47785
+            TabOrder = 5
+          end
+          object Layout_SelTime: TLayout
+            Align = MostTop
+            Position.Y = 38.000000000000000000
+            Size.Width = 353.000000000000000000
+            Size.Height = 37.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+            object Label2: TLabel
+              Align = MostLeft
+              StyledSettings = [Family]
+              Margins.Left = 10.000000000000000000
+              Position.X = 10.000000000000000000
+              Size.Width = 100.000000000000000000
+              Size.Height = 37.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.Font.Size = 23.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claOlivedrab
+              Text = #54924#51032#49884#44036
+              TabOrder = 5
+            end
+            object Label3: TLabel
+              Align = MostRight
+              StyledSettings = [Family]
+              Position.X = 238.000000000000000000
+              Size.Width = 115.000000000000000000
+              Size.Height = 37.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.Font.Size = 23.000000000000000000
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claOlivedrab
+              Text = #48516
+              TabOrder = 4
+            end
+            object edtMinutes: TSpinBox
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 8
+              Cursor = crIBeam
+              Max = 90.000000000000000000
+              Increment = 5.000000000000000000
+              TextSettings.Font.Size = 23.000000000000000000
+              TextSettings.FontColor = claOlivedrab
+              Size.Width = 128.000000000000000000
+              Size.Height = 37.000000000000000000
+              Size.PlatformDefault = False
+              StyledSettings = [Family, Style]
+              OnChange = edtMinutesChange
+            end
+          end
+        end
+        object Layout_Button: TLayout
+          Align = Bottom
+          Margins.Left = 12.000000000000000000
+          Margins.Right = 15.000000000000000000
+          Position.X = 12.000000000000000000
+          Position.Y = 206.000000000000000000
+          Size.Width = 326.000000000000000000
+          Size.Height = 46.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object btnCancel: TButton
+            Align = Right
+            StyledSettings = [Size]
+            Position.X = 283.000000000000000000
+            Size.Width = 43.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = #45803#44592
+            TextSettings.Font.Family = #54756#46300#46972#51064
+            TextSettings.FontColor = claOlivedrab
+            OnClick = btnCancelClick
+          end
+          object btnPause: TButton
+            Align = Client
+            EnableDragHighlight = False
+            StyledSettings = [Size]
+            Size.Width = 106.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            Text = #51068#49884#51473#51648
+            TextSettings.Font.Family = #54756#46300#46972#51064
+            TextSettings.FontColor = claOlivedrab
+            OnClick = btnPauseClick
+          end
+          object btnStart: TButton
+            Align = Left
+            StyledSettings = [Size]
+            Size.Width = 59.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            Text = #54924#51032#49884#51089
+            TextSettings.Font.Family = #54756#46300#46972#51064
+            TextSettings.FontColor = claOlivedrab
+            OnClick = btnStartClick
+          end
+          object btnStop: TButton
+            Align = Left
+            StyledSettings = [Size]
+            Position.X = 59.000000000000000000
+            Size.Width = 59.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            Text = #54924#51032#51333#47308
+            TextSettings.Font.Family = #54756#46300#46972#51064
+            TextSettings.FontColor = claOlivedrab
+            OnClick = btnStopClick
+          end
+          object btnDelete: TButton
+            Align = Left
+            StyledSettings = [Size]
+            Position.X = 118.000000000000000000
+            Size.Width = 59.000000000000000000
+            Size.Height = 46.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Text = #49325#51228
+            TextSettings.Font.Family = #54756#46300#46972#51064
+            TextSettings.FontColor = claOlivedrab
+            OnClick = btnDeleteClick
+          end
+        end
+        object lbl_Message: TLabel
+          Align = MostBottom
+          StyledSettings = [Family, Size]
+          Margins.Top = 5.000000000000000000
+          Position.Y = 257.000000000000000000
+          Size.Width = 353.000000000000000000
+          Size.Height = 21.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claBrown
+          TextSettings.HorzAlign = Center
+          TabOrder = 9
+        end
+      end
+    end
+    object FloatAnimation1: TFloatAnimation
+      AutoReverse = True
+      Duration = 0.200000002980232200
+      Loop = True
+      PropertyName = 'Opacity'
+      StartValue = 0.000000000000000000
+      StopValue = 1.000000000000000000
+    end
+  end
+  object Layout_Meeting: TLayout
+    Position.X = 447.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 337.000000000000000000
+    Size.Height = 457.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Layout4: TLayout
+      Align = Bottom
+      Margins.Left = 20.000000000000000000
+      Margins.Right = 20.000000000000000000
+      Position.X = 20.000000000000000000
+      Position.Y = 407.000000000000000000
+      Size.Width = 297.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object btnInsertNew: TButton
+        Align = Client
+        StyledSettings = [Size]
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        Text = #50696#50557#54616#44592
+        TextSettings.Font.Family = #54756#46300#46972#51064
+        TextSettings.FontColor = claOlivedrab
+        OnClick = btnInsertNewClick
+      end
+      object Button1: TButton
+        Align = MostRight
+        StyledSettings = [Size]
+        Margins.Right = 5.000000000000000000
+        Position.X = 155.000000000000000000
+        Size.Width = 137.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = #53440#51060#47672
+        TextSettings.Font.Family = #54756#46300#46972#51064
+        TextSettings.FontColor = claOlivedrab
+        OnClick = Button1Click
+      end
+    end
+    object Layout9: TLayout
+      Align = Top
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 10
+      object Text1: TText
+        Align = Left
+        Position.X = 20.000000000000000000
+        Size.Width = 55.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        Text = #44592'   '#44036
+        TextSettings.FontColor = claDodgerblue
+      end
+      object edtDateFr_Query: TDateEdit
+        Date = 43789.000000000000000000
+        OnChange = edtDateFr_QueryChange
+        Align = Left
+        Position.X = 75.000000000000000000
+        Size.Width = 108.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+      object edtDateTo_Query: TDateEdit
+        Date = 43789.000000000000000000
+        OnChange = edtDateTo_QueryChange
+        Align = Left
+        Position.X = 214.000000000000000000
+        Size.Width = 108.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+      object Text3: TText
+        Align = Left
+        Position.X = 183.000000000000000000
+        Size.Width = 31.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        Text = '~'
+      end
+    end
+    object Layout12: TLayout
+      Align = Top
+      Padding.Left = 20.000000000000000000
+      Padding.Right = 20.000000000000000000
+      Position.Y = 36.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object Text2: TText
+        Align = Left
+        Position.X = 20.000000000000000000
+        Size.Width = 55.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        Text = #54924#51032#49892
+        TextSettings.FontColor = claDodgerblue
+      end
+      object cboRoom_Query: TComboBox
+        Align = Left
+        Position.X = 75.000000000000000000
+        Size.Width = 247.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnClosePopup = cboRoom_QueryClosePopup
+      end
+    end
+    object ListView_Meeting: TListView
+      ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+      ItemEditAppearanceClassName = 'TEmptyItemObjects'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 337.000000000000000000
+      Size.Height = 335.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ItemAppearanceObjects.FooterObjects.Text.Width = 49.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 142.000000000000000000
+      CanSwipeDelete = False
+      OnItemClick = ListView_MeetingItemClick
+      SearchVisible = True
+      ControlType = Platform
+    end
+  end
+  object AniIndicator1: TAniIndicator
+    Position.X = -8.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 241.000000000000000000
+    Size.Height = 321.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object MediaPlayer1: TMediaPlayer
+    Left = 392
+    Top = 400
+  end
+  object Layout_InsertNew: TLayout
+    Position.X = 296.000000000000000000
+    Position.Y = 154.000000000000000000
+    Size.Width = 328.000000000000000000
+    Size.Height = 246.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Layout7: TLayout
+      Align = Top
+      Position.Y = 77.000000000000000000
+      Size.Width = 328.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      object lblRoom: TLabel
+        Align = MostLeft
+        StyledSettings = [Family]
+        Size.Width = 100.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Center
+        Text = #54924' '#51032' '#49892
+        TabOrder = 2
+      end
+      object cboRoom: TComboBox
+        Align = Client
+        Size.Width = 228.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+      end
+    end
+    object Layout10: TLayout
+      Align = Top
+      Size.Width = 328.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object lblTitle: TLabel
+        Align = MostLeft
+        StyledSettings = [Family]
+        Size.Width = 100.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Center
+        Text = #54924#51032#51068#51088
+        TabOrder = 3
+      end
+      object edtDate: TDateEdit
+        Date = 43789.000000000000000000
+        DateFormatKind = Long
+        Align = Client
+        Size.Width = 228.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+      end
+    end
+    object Layout11: TLayout
+      Align = Top
+      Position.Y = 41.000000000000000000
+      Size.Width = 328.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object lblDate: TLabel
+        Align = MostLeft
+        StyledSettings = [Family]
+        Size.Width = 100.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claDodgerblue
+        TextSettings.HorzAlign = Center
+        Text = #54924#51032#49884#44036
+        TabOrder = 0
+      end
+      object Layout5: TLayout
+        Align = Client
+        Size.Width = 228.000000000000000000
+        Size.Height = 36.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object edtTimeFr: TTimeEdit
+          Time = 0.475753240740740800
+          OnClosePicker = edtTimeFrClosePicker
+          Align = MostLeft
+          Size.Width = 116.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object edtTimeTo: TTimeEdit
+          Time = 0.475753240740740800
+          Align = Client
+          Size.Width = 112.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+    end
+    object Layout6: TLayout
+      Align = Client
+      Margins.Left = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Size.Width = 308.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object btnSave: TButton
+        Align = Left
+        StyledSettings = [Size]
+        Size.Width = 223.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = #50696#50557
+        TextSettings.Font.Family = #54756#46300#46972#51064
+        TextSettings.FontColor = claOlivedrab
+        OnClick = btnSaveClick
+      end
+      object btnSaveCancel: TButton
+        Align = Client
+        StyledSettings = [Size]
+        Size.Width = 85.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = #52712#49548
+        TextSettings.Font.Family = #54756#46300#46972#51064
+        TextSettings.FontColor = claOlivedrab
+        OnClick = btnSaveCancelClick
+      end
+    end
+    object Layout2: TLayout
+      Align = Top
+      Position.Y = 113.000000000000000000
+      Size.Width = 328.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lblTime: TLabel
+        Align = MostLeft
+        StyledSettings = [Family]
+        Size.Width = 100.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        TextSettings.HorzAlign = Center
+        Text = #54924#51032#51228#47785
+        TabOrder = 0
+      end
+      object edtTitle: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 1
+        MaxLength = 50
+        Size.Width = 228.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Layout3: TLayout
+      Align = Top
+      Position.Y = 154.000000000000000000
+      Size.Width = 328.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        Align = MostLeft
+        StyledSettings = [Family]
+        Size.Width = 100.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claGray
+        TextSettings.HorzAlign = Center
+        Text = #52280#49437#45824#49345
+        TabOrder = 0
+      end
+      object edtMember: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        TabOrder = 1
+        MaxLength = 50
+        Size.Width = 228.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+end

@@ -1,0 +1,196 @@
+object frmCom_Emp_Summary01: TfrmCom_Emp_Summary01
+  Left = 0
+  Top = 0
+  Caption = 'Com_Emp_Summary01'
+  ClientHeight = 633
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnQuery: TButton
+      Align = Right
+      Margins.Right = 10.000000000000000000
+      Position.X = 326.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 374.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+    object btnClose: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+    object SpeedButton1: TSpeedButton
+      Align = Right
+      Position.X = 253.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Excel'
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 36.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object cboCompany: TComboBox
+      Align = Center
+      Margins.Left = 5.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnChange = ComboBoxChange
+      OnClosePopup = ComboBoxChange
+    end
+  end
+  object TMSFMXGrid1: TTMSFMXGrid
+    Align = Client
+    DisableFocusEffect = False
+    TabOrder = 2
+    Size.Width = 384.000000000000000000
+    Size.Height = 349.000000000000000000
+    Size.PlatformDefault = False
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.TouchScrollingSensitivity = 0.100000001490116100
+    Options.Printing.PageNumberFormat = '%g'
+    Version = '2.3.3.0'
+    Fill.Kind = Solid
+    Stroke.Kind = Solid
+    TopRow = 1
+    LeftCol = 1
+    OnGetCellAppearance = TMSFMXGrid1GetCellAppearance
+    Columns = <
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 68.000000000000000000
+      end>
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Client
+    Size.Width = 384.000000000000000000
+    Size.Height = 349.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Timer_Query: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = Timer_QueryTimer
+    Left = 104
+    Top = 208
+  end
+  object Chart1: TChart
+    Position.Y = 433.000000000000000000
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Bottom
+    TabOrder = 4
+    Size.Width = 384.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+  end
+  object TMSFMXGridExcelIO1: TTMSFMXGridExcelIO
+    Grid = TMSFMXGrid1
+    Options.ExportOverwriteMessage = 'File %s already exists'#13'Ok to overwrite ?'
+    UseUnicode = False
+    Version = '3.6.2'
+    Left = 160
+    Top = 352
+  end
+end

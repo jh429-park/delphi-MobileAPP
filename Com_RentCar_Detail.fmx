@@ -1,0 +1,622 @@
+object frmCom_RentCar_Detail: TfrmCom_RentCar_Detail
+  Left = 0
+  Top = 0
+  Caption = #52264#47049#48176#52264#54788#54889
+  ClientHeight = 766
+  ClientWidth = 549
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Align = MostTop
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 549.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label_Title: TLabel
+      Align = Client
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 423.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      Text = #48176#52264#49888#52397
+      TabOrder = 1
+    end
+    object btnClose: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+    object btnQuery: TButton
+      Align = Right
+      Position.X = 491.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+  end
+  object Layout_Combo: TLayout
+    Align = MostBottom
+    Margins.Left = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 404.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 2
+    object cboCompany: TComboBox
+      Align = Center
+      Margins.Left = 5.000000000000000000
+      Size.Width = 114.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+  end
+  object Layout_I: TLayout
+    Align = MostTop
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 20.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 68.000000000000000000
+    Size.Width = 509.000000000000000000
+    Size.Height = 267.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object Layout3: TLayout
+      Align = Left
+      Size.Width = 69.000000000000000000
+      Size.Height = 267.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Label3: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 128.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #50868#54665#49324#50976
+        TabOrder = 9
+      end
+      object Label4: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 160.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #54665'  '#49440'  '#51648
+        TabOrder = 7
+      end
+      object Label5: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 32.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #48176#52264#51068#49884
+        TabOrder = 6
+      end
+      object Label6: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #49888'  '#52397'  '#51088
+        TabOrder = 11
+      end
+      object Label8: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 192.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #46041'  '#49849'  '#51088
+        TabOrder = 10
+      end
+      object Label9: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 64.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #48152#45225#50696#51221
+        TabOrder = 4
+      end
+      object Label19: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Position.Y = 96.000000000000000000
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #49888#52397#52264#47049
+        TabOrder = 5
+      end
+      object Label7: TLabel
+        Align = Client
+        StyledSettings = [Family, Style]
+        Size.Width = 69.000000000000000000
+        Size.Height = 43.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claGray
+        Text = #50836#52397#49324#54637
+        TabOrder = 8
+      end
+    end
+    object Layout_Data: TLayout
+      Align = Client
+      Size.Width = 440.000000000000000000
+      Size.Height = 267.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object edtI_Why: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 4
+        Position.Y = 127.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtI_Where: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 3
+        Position.Y = 159.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object edtI_Who: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Top
+        TabOrder = 5
+        Position.Y = 191.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Layout4: TLayout
+        Align = Top
+        Position.Y = 31.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object edtI_DateFr: TDateEdit
+          Date = 43753.000000000000000000
+          Format = 'YYYY-MM-DD (DDD)'
+          DateFormatKind = Long
+          Align = Left
+          Size.Width = 181.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object edtI_TimeFr: TTimeEdit
+          Time = 0.475694444444444400
+          Align = Client
+          Size.Width = 259.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+      object Layout5: TLayout
+        Align = Top
+        Position.Y = 62.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object edtI_DateTo: TDateEdit
+          Date = 43753.000000000000000000
+          Format = 'YYYY-MM-DD (DDD)'
+          DateFormatKind = Long
+          Align = Left
+          Size.Width = 181.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object edtI_TimeTo: TTimeEdit
+          Time = 0.475694444444444400
+          Align = Client
+          Size.Width = 259.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+        end
+      end
+      object Layout_Body: TLayout
+        Align = Top
+        Size.Width = 440.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtI_Cd_Company: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 11
+          ReadOnly = True
+          Position.X = 114.000000000000000000
+          Enabled = False
+          Size.Width = 39.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtI_Nm_Dept: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 10
+          ReadOnly = True
+          Position.X = 81.000000000000000000
+          Enabled = False
+          Size.Width = 128.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object edtI_Nm_Kor: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 7
+          ReadOnly = True
+          Enabled = False
+          Size.Width = 81.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object edtI_Cd_Dept: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 6
+          ReadOnly = True
+          Position.X = 158.000000000000000000
+          Enabled = False
+          Size.Width = 57.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtI_No_Emp: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 5
+          ReadOnly = True
+          Enabled = False
+          Size.Width = 44.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtSeq: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          TabOrder = 4
+          Position.X = 80.000000000000000000
+          Position.Y = -1.000000000000000000
+          Enabled = False
+          Size.Width = 41.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtO_YesNo: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 8
+          ReadOnly = True
+          Position.X = 273.000000000000000000
+          Enabled = False
+          Size.Width = 48.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtO_YesNoName: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 9
+          ReadOnly = True
+          TextSettings.Font.StyleExt = {00070000000200000004000000}
+          TextSettings.FontColor = claChocolate
+          Enabled = False
+          Size.Width = 231.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          StyledSettings = [Family, Size]
+        end
+      end
+      object edtI_MEMO: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        MaxLength = 100
+        Align = Client
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Viewport.Width = 430.000000000000000000
+        Viewport.Height = 34.000000000000000000
+      end
+      object Layout1: TLayout
+        Align = Top
+        Position.Y = 95.000000000000000000
+        Size.Width = 440.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 18
+        object edtI_Car_Name: TComboBox
+          Align = Client
+          Size.Width = 416.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 18
+        end
+        object btnClearCar_Name: TTMSFMXSpeedButton
+          Align = MostRight
+          CanFocus = True
+          GroupName = ''
+          IconTintColor = claYellow
+          Margins.Top = 3.000000000000000000
+          Margins.Bottom = 3.000000000000000000
+          Position.X = 416.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 24.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = btnClearCar_NameClick
+          BitmapContainer = frmMainMenu.ButtonBitmapContainer
+          BitmapName = 'Item3'
+          ShowImage = True
+          Version = '1.6.0.0'
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object Layout_O: TLayout
+    Align = MostTop
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 388.000000000000000000
+    Size.Width = 509.000000000000000000
+    Size.Height = 74.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object Layout2: TLayout
+      Align = Client
+      Size.Width = 440.000000000000000000
+      Size.Height = 74.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 9
+      object edtO_MEMO: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        MaxLength = 100
+        Align = Client
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Size.Width = 438.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 17
+        Viewport.Width = 430.000000000000000000
+        Viewport.Height = 33.000000000000000000
+      end
+      object Layout7: TLayout
+        Align = Top
+        Size.Width = 440.000000000000000000
+        Size.Height = 31.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object edtO_Cd_Company: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 9
+          Position.X = 114.000000000000000000
+          Size.Width = 39.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtO_Nm_Kor: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 7
+          Size.Width = 113.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+        object edtO_Cd_Dept: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 6
+          Position.X = 158.000000000000000000
+          Size.Width = 57.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtO_No_Emp: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Left
+          TabOrder = 5
+          Size.Width = 44.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          Visible = False
+        end
+        object edtO_Nm_Dept: TEdit
+          Touch.InteractiveGestures = [LongTap, DoubleTap]
+          Align = Client
+          TabOrder = 8
+          Size.Width = 327.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+        end
+      end
+    end
+    object Layout6: TLayout
+      Align = Left
+      Size.Width = 69.000000000000000000
+      Size.Height = 74.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      object Label21: TLabel
+        Align = Top
+        StyledSettings = [Family, Style]
+        Size.Width = 69.000000000000000000
+        Size.Height = 32.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claCornflowerblue
+        Text = #48176#52264#45812#45817
+        TabOrder = 7
+      end
+      object Label1: TLabel
+        Align = Client
+        StyledSettings = [Family, Style]
+        Size.Width = 69.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 13.000000000000000000
+        TextSettings.FontColor = claCornflowerblue
+        Text = #51204#45804#49324#54637
+        TabOrder = 5
+      end
+    end
+  end
+  object Layout_I_Btn: TLayout
+    Align = MostTop
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 340.000000000000000000
+    Size.Width = 509.000000000000000000
+    Size.Height = 43.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button_Delete: TButton
+      Align = Right
+      StyledSettings = [Family, FontColor]
+      Position.X = 412.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #49325#51228
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = Button_DeleteClick
+    end
+    object Button_Save: TButton
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      Size.Width = 412.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #51200#51109
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = Button_SaveClick
+    end
+  end
+  object Layout_O_Btn: TLayout
+    Align = Top
+    Margins.Left = 20.000000000000000000
+    Margins.Top = 5.000000000000000000
+    Margins.Right = 20.000000000000000000
+    Position.X = 20.000000000000000000
+    Position.Y = 467.000000000000000000
+    Size.Width = 509.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    object Button_Yes: TButton
+      Align = Client
+      StyledSettings = [Family]
+      Size.Width = 412.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #48176#52264#49849#51064
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claGreen
+      OnClick = Button_YesClick
+    end
+    object Button_No: TButton
+      Align = Right
+      StyledSettings = [Family]
+      Position.X = 412.000000000000000000
+      Size.Width = 97.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #48176#52264#48520#44032
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claFirebrick
+      OnClick = Button_NoClick
+    end
+  end
+end

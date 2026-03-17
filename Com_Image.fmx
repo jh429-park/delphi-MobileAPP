@@ -1,0 +1,43 @@
+object frmCom_Image: TfrmCom_Image
+  Left = 0
+  Top = 0
+  Caption = #49324#51652
+  ClientHeight = 567
+  ClientWidth = 357
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object ImageControl1: TImageControl
+    Align = Client
+    Size.Width = 357.000000000000000000
+    Size.Height = 567.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    OnClick = ImageControl1Click
+    object Text_Title: TText
+      Align = Top
+      Padding.Left = 10.000000000000000000
+      Padding.Right = 10.000000000000000000
+      Size.Width = 357.000000000000000000
+      Size.Height = 51.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Text'
+      TextSettings.Font.Size = 23.000000000000000000
+      TextSettings.FontColor = claGoldenrod
+      object btnClose: TButton
+        Align = Left
+        Position.X = 10.000000000000000000
+        Size.Width = 48.000000000000000000
+        Size.Height = 51.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'priortoolbutton'
+        TabOrder = 1
+        Text = 'MenuBTN'
+        OnClick = btnCloseClick
+      end
+    end
+  end
+end

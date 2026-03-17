@@ -1,0 +1,119 @@
+inherited frmCom_MasterDetail_Emp_LgXhdpiPh: TfrmCom_MasterDetail_Emp_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited HeaderToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited btnQuery: TButton
+      Position.X = 402.000000000000000000
+    end
+    inherited Label_Title: TLabel
+      Size.Width = 440.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Layout_Master: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 169.000000000000000000
+    inherited ListView_EmpList: TListView
+      Size.Width = 450.000000000000000000
+      Size.Height = 129.000000000000000000
+    end
+    inherited Layout_Dept: TLayout
+      Size.Width = 450.000000000000000000
+      inherited cboDeptCode: TComboBox
+        Position.X = 353.000000000000000000
+      end
+    end
+  end
+  inherited MViewport3D: TViewport3D
+    Position.Y = 217.000000000000000000
+    Size.Width = 450.000000000000000000
+    Size.Height = 478.000000000000000000
+    inherited Grid3D: TGrid3D
+      Quanternion = '(0.70710676908493,0,0,0.70710676908493)'
+    end
+    inherited Layout_SlideButton: TLayout
+      Position.Y = 435.000000000000000000
+      Size.Width = 450.000000000000000000
+      inherited sbtRight: TSpeedButton
+        Position.X = 354.000000000000000000
+      end
+      inherited sbtRight_Auto: TSpeedButton
+        Position.X = 402.000000000000000000
+      end
+    end
+    inherited Text_ImageName: TText
+      Size.Width = 450.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited MultiView_Detail: TMultiView
+    Size.Height = 470.000000000000000000
+    Visible = False
+    inherited Layout_Detail: TLayout
+      Size.Height = 470.000000000000000000
+      inherited Layout_Detail_Body: TLayout
+        Size.Height = 293.000000000000000000
+        inherited TabControl_Detail: TTabControl
+          Sizes = (
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s)
+          inherited TabItem_School: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem_Emp_Bal: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem6: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem_family: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 68.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem7: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem8: TTabItem
+            Size.Width = 44.000000000000000000
+            ExplicitSize.cx = 56.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem9: TTabItem
+            Size.Width = 32.000000000000000000
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+        end
+        inherited ListView_Detail_Body: TListView
+          Size.Height = 176.000000000000000000
+        end
+        inherited Button_Document: TButton
+          Position.Y = 249.000000000000000000
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,202 @@
+object frmCom_Chart_2D: TfrmCom_Chart_2D
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 587
+  ClientWidth = 399
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Size.Width = 399.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object MenuButton: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = MenuButtonClick
+    end
+    object btnQuery: TButton
+      Align = Right
+      Position.X = 351.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+  end
+  object Layout_Chart: TLayout
+    Align = Bottom
+    Margins.Top = 1.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.Y = 352.000000000000000000
+    Size.Width = 389.000000000000000000
+    Size.Height = 235.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Foot.Visible = False
+      LeftWall.Brush.Color = x000D0C0C
+      LeftWall.Color = xFFF5F58B
+      LeftWall.Dark3D = False
+      LeftWall.Pen.Visible = False
+      LeftWall.Visible = False
+      Legend.CheckBoxesStyle = cbsRadio
+      Legend.DividingLines.Visible = True
+      Legend.Font.Size = 4.578313350677490000
+      Legend.LegendStyle = lsSeries
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      Legend.Visible = False
+      MarginBottom = 0
+      MarginLeft = 0
+      MarginRight = 0
+      MarginTop = 0
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        '-')
+      Title.Visible = False
+      OnClickSeries = Chart1ClickSeries
+      BottomAxis.LabelsFormat.Font.Size = 4.578313350677490000
+      BottomAxis.LabelsFormat.Font.Color = xFFFAE986
+      BottomAxis.LabelsFormat.Font.Brush.Color = xFFFAE986
+      BottomAxis.Title.Font.Color = xFFF0D6A6
+      BottomAxis.Title.Font.Brush.Color = xFFF0D6A6
+      Chart3DPercent = 8
+      LeftAxis.LabelsFormat.Font.Size = 4.578313350677490000
+      LeftAxis.LabelsFormat.Font.Color = xFFF5F53D
+      LeftAxis.LabelsFormat.Font.Brush.Color = xFFF5F53D
+      Panning.MouseWheel = pmwNone
+      View3D = False
+      View3DOptions.FontZoom = 114
+      Zoom.Animated = True
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Zoom.Pen.Visible = False
+      Align = Client
+      BevelWidth = 2
+      BorderWidth = 2
+      Color = x000D0C0C
+      TabOrder = 0
+      Opacity = 0.000000000000000000
+      Size.Width = 389.000000000000000000
+      Size.Height = 215.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 13
+      object LineSeries1: TLineSeries
+        Brush.BackColor = x00FFFFFF
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+      end
+    end
+    object Layout1: TLayout
+      Align = Top
+      Margins.Left = 19.000000000000000000
+      Position.X = 19.000000000000000000
+      Size.Width = 370.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object CheckBox_3D: TCheckBox
+        Align = Right
+        StyledSettings = [Family, Style, FontColor]
+        Position.X = 325.000000000000000000
+        Size.Width = 45.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = '3D'
+        TextSettings.Font.Size = 13.000000000000000000
+        OnChange = CheckBox_3DChange
+      end
+      object CheckBox_Sort: TCheckBox
+        Align = Left
+        StyledSettings = [Family, Style, FontColor]
+        Size.Width = 63.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Text = 'Sort'
+        TextSettings.Font.Size = 13.000000000000000000
+        OnChange = CheckBox_SortChange
+      end
+    end
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TListItemAppearance'
+    ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 399.000000000000000000
+    Size.Height = 268.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearance.ItemHeight = 25
+    ItemAppearanceObjects.ItemObjects.Text.Font.Size = 13.000000000000000000
+    ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+    OnItemClick = ListView1ItemClick
+  end
+  object Rectangle_Detail: TRectangle
+    Align = Bottom
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 316.000000000000000000
+    Size.Width = 379.000000000000000000
+    Size.Height = 35.000000000000000000
+    Size.PlatformDefault = False
+    XRadius = 10.000000000000000000
+    YRadius = 10.000000000000000000
+    object CornerButton_Detail: TCornerButton
+      Align = Client
+      StyledSettings = [Family, FontColor]
+      ImageIndex = 1
+      Sides = [Top, Left, Bottom, Right]
+      Size.Width = 379.000000000000000000
+      Size.Height = 35.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = #49345#49464#48372#44592
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {04040000000000000004000000}
+      XRadius = 20.000000000000000000
+      YRadius = 20.000000000000000000
+      OnClick = CornerButton_DetailClick
+    end
+  end
+end

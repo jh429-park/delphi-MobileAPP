@@ -1,0 +1,61 @@
+inherited frmCom_Work_Exception_LgXhdpiPh: TfrmCom_Work_Exception_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited HeaderToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited Label_Title: TLabel
+      Size.Width = 440.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Layout_Combo: TLayout
+    Size.Width = 450.000000000000000000
+  end
+  inherited Layout_Detail: TLayout
+    Size.Width = 444.000000000000000000
+    inherited Layout_Data: TLayout
+      Size.Width = 368.000000000000000000
+      inherited Layout4: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtDateFr: TDateEdit
+          Size.Width = 268.000000000000000000
+        end
+        inherited edtTimeFr: TTimeEdit
+          Position.X = 268.000000000000000000
+        end
+      end
+      inherited Layout5: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtDateTo: TDateEdit
+          Size.Width = 268.000000000000000000
+        end
+        inherited edtTimeTo: TTimeEdit
+          Position.X = 268.000000000000000000
+        end
+      end
+      inherited cboCompany: TComboBox
+        Size.Width = 363.000000000000000000
+      end
+      inherited Layout1: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtNm_Kor: TEdit
+          Position.X = 271.000000000000000000
+        end
+      end
+      inherited edtMemo: TEdit
+        Size.Width = 368.000000000000000000
+      end
+    end
+    inherited Layout_Ok: TLayout
+      Size.Width = 444.000000000000000000
+      inherited Button_Save: TButton
+        Size.Width = 444.000000000000000000
+      end
+    end
+  end
+  inherited Text_Key: TText
+    Position.Y = 672.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+end

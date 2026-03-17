@@ -1,0 +1,371 @@
+object frmCom_MasterDetail_Etc: TfrmCom_MasterDetail_Etc
+  Left = 0
+  Top = 0
+  Caption = 'frmCom_MasterDetail01'
+  ClientHeight = 526
+  ClientWidth = 340
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Size.Width = 340.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object MenuButton: TButton
+      Align = Left
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = MenuButtonClick
+    end
+    object btnQuery: TButton
+      Align = Right
+      Position.X = 292.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 330.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+  end
+  object Layout_Master: TLayout
+    Align = Client
+    Size.Width = 340.000000000000000000
+    Size.Height = 446.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object ListView_List: TListView
+      ItemAppearanceClassName = 'TCustomizeItemObjects'
+      ItemEditAppearanceClassName = 'TCustomizeItemObjects'
+      HeaderAppearanceClassName = 'TListHeaderObjects'
+      FooterAppearanceClassName = 'TListHeaderObjects'
+      Align = Client
+      Size.Width = 340.000000000000000000
+      Size.Height = 446.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      ItemAppearance.ItemHeight = 80
+      ItemAppearance.ItemEditHeight = 80
+      ItemAppearanceObjects.ItemObjects.Text.TextVertAlign = Leading
+      ItemAppearanceObjects.ItemObjects.Text.Height = 70.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Text.VertAlign = Trailing
+      ItemAppearanceObjects.ItemObjects.Text.PlaceOffset.X = 75.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Detail.TextVertAlign = Leading
+      ItemAppearanceObjects.ItemObjects.Detail.Height = 30.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Detail.VertAlign = Trailing
+      ItemAppearanceObjects.ItemObjects.Detail.Visible = True
+      ItemAppearanceObjects.ItemObjects.Detail.PlaceOffset.X = 75.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Image.Width = 70.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Image.Height = 70.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Image.Visible = True
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = True
+      ItemAppearanceObjects.ItemEditObjects.Text.TextVertAlign = Leading
+      ItemAppearanceObjects.ItemEditObjects.Text.Height = 70.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Text.VertAlign = Trailing
+      ItemAppearanceObjects.ItemEditObjects.Text.PlaceOffset.X = 105.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Detail.TextVertAlign = Leading
+      ItemAppearanceObjects.ItemEditObjects.Detail.Height = 30.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Detail.VertAlign = Trailing
+      ItemAppearanceObjects.ItemEditObjects.Detail.Visible = True
+      ItemAppearanceObjects.ItemEditObjects.Detail.PlaceOffset.X = 105.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Image.Width = 70.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Image.Height = 70.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.Image.Visible = True
+      ItemAppearanceObjects.ItemEditObjects.Image.PlaceOffset.X = 30.000000000000000000
+      ItemAppearanceObjects.ItemEditObjects.GlyphButton.Visible = True
+      ItemAppearanceObjects.FooterObjects.Text.Width = 49.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+      ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 142.000000000000000000
+      CanSwipeDelete = False
+      OnItemClick = ListView_ListItemClick
+      SearchVisible = True
+      ControlType = Platform
+    end
+  end
+  object Layout_Combo: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 340.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object ComboBox_Sel: TComboBox
+      Align = Client
+      Images = frmCom_DataModule.ImageList
+      Size.Width = 275.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      OnClosePopup = ComboBox_SelClosePopup
+    end
+    object Label1: TLabel
+      Align = Left
+      StyledSettings = [Family, FontColor]
+      Size.Width = 65.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Center
+      Text = #44428#50669
+      TabOrder = 6
+    end
+  end
+  object MultiView_Detail: TMultiView
+    TargetControl = Layout_Master
+    DrawerOptions.Placement = Right
+    DrawerOptions.TouchAreaSize = 200.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 552.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 3
+    object Layout_Detail_Memo: TLayout
+      Align = Client
+      Size.Width = 250.000000000000000000
+      Size.Height = 552.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Memo_Body: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        ReadOnly = True
+        StyledSettings = [Family, Style, FontColor]
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.WordWrap = True
+        Align = Client
+        Size.Width = 250.000000000000000000
+        Size.Height = 464.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        Viewport.Width = 250.000000000000000000
+        Viewport.Height = 464.000000000000000000
+      end
+      object Text_Detail_Top: TText
+        Align = Top
+        Size.Width = 250.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Text_DetailTitle'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claNavy
+        TextSettings.HorzAlign = Leading
+      end
+      object Text_Detail_Bottom: TText
+        Align = Bottom
+        Position.Y = 524.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Text_DetailTitle'
+        TextSettings.FontColor = claGray
+      end
+    end
+    object Layout_Detail_ListView: TLayout
+      Align = Client
+      Size.Width = 250.000000000000000000
+      Size.Height = 552.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Layout_Detail_Header: TLayout
+        Align = Top
+        Position.Y = 50.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 177.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Image_Detail: TImageControl
+          Align = Left
+          EnableOpenDialog = False
+          Size.Width = 145.000000000000000000
+          Size.Height = 177.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object FloatAnimation1: TFloatAnimation
+            AnimationType = InOut
+            Duration = 2.000000000000000000
+            Inverse = True
+            Loop = True
+            PropertyName = 'Opacity'
+            StartValue = 1.000000000000000000
+            StopValue = 0.500000000000000000
+          end
+        end
+        object ListView_Detail: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 105.000000000000000000
+          Size.Height = 177.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          ItemAppearance.ItemHeight = 25
+          ItemAppearanceObjects.ItemObjects.Text.Font.Size = 13.000000000000000000
+          ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+        end
+      end
+      object Layout_Detail_Body: TLayout
+        Align = Client
+        Size.Width = 250.000000000000000000
+        Size.Height = 325.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object TabControl_Detail: TTabControl
+          Align = Top
+          Size.Width = 250.000000000000000000
+          Size.Height = 73.000000000000000000
+          Size.PlatformDefault = False
+          TabHeight = 49.000000000000000000
+          TabIndex = 4
+          TabOrder = 1
+          TabPosition = PlatformDefault
+          OnChange = TabControl_DetailChange
+          Sizes = (
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s)
+          object TabItem0: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 32.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = #51648#46020
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          object TabItem1: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 44.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = #47196#46300#48624
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          object TabItem2: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 56.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = #44592#52488#51221#48372
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          object TabItem3: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = False
+            Size.Width = 32.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = #44277#49892
+            ExplicitSize.cx = 56.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          object TabItem4: TTabItem
+            CustomIcon = <
+              item
+              end>
+            IsSelected = True
+            Size.Width = 44.000000000000000000
+            Size.Height = 49.000000000000000000
+            Size.PlatformDefault = False
+            StyleLookup = ''
+            TabOrder = 0
+            Text = #51077#51452#49324
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+        end
+        object ListView_Detail_Body: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 250.000000000000000000
+          Size.Height = 208.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          ItemAppearance.ItemHeight = 25
+          ItemAppearanceObjects.ItemObjects.Text.Font.Size = 13.000000000000000000
+          ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+        end
+        object Button_Document: TButton
+          Align = Bottom
+          StyledSettings = [Family, Style, FontColor]
+          Position.Y = 281.000000000000000000
+          Size.Width = 250.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = #44221#47141#44592#49696#49436
+          TextSettings.Font.Size = 13.000000000000000000
+        end
+      end
+      object Text_DetailTitle: TText
+        Align = MostTop
+        Size.Width = 250.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Text_DetailTitle'
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = claForestgreen
+      end
+    end
+  end
+end

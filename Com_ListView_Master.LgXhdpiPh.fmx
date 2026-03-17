@@ -1,0 +1,51 @@
+inherited frmCom_ListView_Master_LgXhdpiPh: TfrmCom_ListView_Master_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited HeaderToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited btnQuery: TButton
+      Position.X = 402.000000000000000000
+    end
+    inherited Label_Title: TLabel
+      Size.Width = 440.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Layout_Master: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 424.000000000000000000
+    inherited ListView1: TListView
+      Size.Width = 450.000000000000000000
+      Size.Height = 424.000000000000000000
+      ItemAppearanceObjects.ItemObjects.Accessory.Visible = True
+    end
+    inherited MultiView: TMultiView
+      inherited MultiView_Bottom: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited MultiView_Top: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+      inherited MultiView_Body: TMemo
+        Viewport.Width = 316.000000000000000000
+        Viewport.Height = 432.000000000000000000
+      end
+    end
+  end
+  inherited AniIndicator1: TAniIndicator
+    Size.Width = 450.000000000000000000
+    Size.Height = 424.000000000000000000
+  end
+  inherited lbl_TagString: TLabel
+    Position.Y = 672.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+  inherited Chart1: TChart
+    Position.Y = 472.000000000000000000
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Size.Width = 450.000000000000000000
+  end
+end

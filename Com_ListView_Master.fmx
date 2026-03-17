@@ -1,0 +1,832 @@
+object frmCom_ListView_Master: TfrmCom_ListView_Master
+  Left = 0
+  Top = 0
+  Caption = 'frmCom_ListView_Master'
+  ClientHeight = 632
+  ClientWidth = 375
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Orientations = [Portrait]
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object btnQuery: TButton
+      Align = Right
+      Hint = 'Refresh'
+      Position.X = 333.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'searcheditbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Client
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 217.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 3
+    end
+    object btnClose: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      OnClick = btnCloseClick
+    end
+    object btnExcel: TButton
+      Align = Right
+      Hint = 'Excel Download'
+      Images = frmMainMenu.ImageList_MainMenu
+      ImageIndex = 39
+      Position.X = 285.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnExcelClick
+    end
+  end
+  object Timer_Query: TTimer
+    Enabled = False
+    Interval = 1
+    OnTimer = Timer_QueryTimer
+    Left = 88
+    Top = 216
+  end
+  object Chart1: TChart
+    Position.Y = 382.000000000000000000
+    Foot.Font.StyleExt = {00040000000200000004000000}
+    Legend.Title.Font.StyleExt = {00070000000000000004000000}
+    SubFoot.Font.StyleExt = {00040000000200000004000000}
+    Title.Text.Strings = (
+      'TChart')
+    OnClickSeries = Chart1ClickSeries
+    View3D = False
+    Zoom.Brush.Kind = None
+    Zoom.Pen.Fill.Color = claSilver
+    Align = Bottom
+    TabOrder = 8
+    Size.Width = 375.000000000000000000
+    Size.Height = 200.000000000000000000
+    Size.PlatformDefault = False
+    ColorPaletteIndex = 13
+  end
+  object Layout_Date: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object edtDateFr: TDateEdit
+      Date = 43789.000000000000000000
+      Format = 'YYYY-MM-DD'
+      Align = Left
+      Position.X = 89.000000000000000000
+      Size.Width = 112.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+      TabOrder = 2
+      TextSettings.FontColor = claNavy
+    end
+    object edtDateTo: TDateEdit
+      Date = 43789.000000000000000000
+      Format = 'YYYY-MM-DD'
+      Align = Left
+      Position.X = 233.000000000000000000
+      Size.Width = 114.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Family, Size, Style]
+      TabOrder = 1
+      TextSettings.FontColor = claNavy
+    end
+    object Text_DateTo: TText
+      Align = Left
+      Position.X = 201.000000000000000000
+      Size.Width = 32.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      Text = '~'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claNavy
+    end
+    object Label_Date: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 89.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #51068'        '#51088
+      TabOrder = 0
+    end
+  end
+  object Layout_Insa_GroupBy: TLayout
+    Align = Top
+    Position.Y = 146.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    object Label4: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 85.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #48516#47448#44592#51456
+      TabOrder = 0
+    end
+    object cboGroupBy: TTMSFMXRadioGroupPicker
+      Align = Client
+      DisableFocusEffect = False
+      TabOrder = 27
+      Size.Width = 290.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      Fill.Kind = Solid
+      Stroke.Kind = Solid
+      Version = '1.0.1.2'
+      HelpType = htKeyword
+      DropDownAutoSize = True
+      Columns = 1
+      GroupCheckBox = False
+      GroupCheckBoxChecked = False
+      Items = <>
+      ItemIndex = -1
+      ItemFontColor = claBlack
+    end
+  end
+  object Grid1: TTMSFMXGrid
+    DisableFocusEffect = False
+    Position.Y = 179.000000000000000000
+    TabOrder = 5
+    Visible = False
+    Size.Width = 375.000000000000000000
+    Size.Height = 171.000000000000000000
+    Size.PlatformDefault = False
+    FixedFooterRows = 1
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.TouchScrollingSensitivity = 0.100000001490116100
+    Options.Printing.PageNumberFormat = '%g'
+    Version = '2.3.3.10'
+    Fill.Kind = Solid
+    Stroke.Kind = Solid
+    TopRow = 1
+    LeftCol = 1
+    OnGetCellLayout = Grid1GetCellLayout
+    Columns = <
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        ReadOnly = True
+        Width = 50.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        ReadOnly = True
+        Width = 70.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        ReadOnly = True
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 40.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Width = 40.000000000000000000
+      end>
+    object BitmapAnimation1: TBitmapAnimation
+      Duration = 0.200000002980232200
+    end
+  end
+  object Layout_Insert: TLayout
+    Align = Bottom
+    Position.Y = 582.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object sbtInsert: TSpeedButton
+      Align = Right
+      StyledSettings = [Family, Size, Style]
+      Images = frmMainMenu.ImageList_MainMenu
+      ImageIndex = 34
+      Position.X = 320.000000000000000000
+      Position.Y = 1.000000000000000000
+      Size.Width = 55.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claDeepskyblue
+      OnClick = sbtInsertClick
+    end
+  end
+  object Planner1: TTMSFMXPlanner
+    Touch.GestureManager = GestureManager1
+    OnGesture = Planner1Gesture
+    Align = Client
+    ClipChildren = True
+    DisableFocusEffect = False
+    TabOrder = 1
+    Visible = False
+    Size.Width = 375.000000000000000000
+    Size.Height = 203.000000000000000000
+    Size.PlatformDefault = False
+    DefaultItem.StartTime = 44008.270833333340000000
+    DefaultItem.EndTime = 44008.375000000000000000
+    Fill.Kind = Solid
+    Groups = <>
+    GroupsAppearance.TopSize = 50.000000000000000000
+    GroupsAppearance.BottomSize = 50.000000000000000000
+    Items = <
+      item
+        Text = 'Notes'
+        Title = 'Sample Item'
+        StartTime = 44047.270833333340000000
+        EndTime = 44047.375000000000000000
+      end>
+    ModeSettings.StartTime = 44008.424317152780000000
+    ModeSettings.EndTime = 44028.424317152780000000
+    Positions.Count = 1
+    Positions.ViewStart = 8
+    PositionsAppearance.Size = 100.000000000000000000
+    PositionsAppearance.TopSize = 50.000000000000000000
+    PositionsAppearance.BottomSize = 50.000000000000000000
+    PositionsAppearance.TopLeftNavigationButtonSize = 18.000000000000000000
+    PositionsAppearance.TopRightNavigationButtonSize = 18.000000000000000000
+    PositionsAppearance.BottomLeftNavigationButtonSize = 18.000000000000000000
+    PositionsAppearance.BottomRightNavigationButtonSize = 18.000000000000000000
+    Resources = <
+      item
+        Name = 'Resource0'
+        Text = 'BMW'
+      end
+      item
+        Name = 'Resource1'
+        Text = 'Mercedes'
+      end
+      item
+        Name = 'Resource2'
+        Text = 'Audi'
+      end>
+    SelectionAppearance.Fill.Color = claSilver
+    Stroke.Kind = Solid
+    TimeLine.DisplayOffsetType = pduDay
+    TimeLine.DisplayUnitSize = 25.000000000000000000
+    TimeLine.ViewStart = 44008.000000000000000000
+    TimeLineAppearance.LeftSize = 50.000000000000000000
+    TimeLineAppearance.RightSize = 50.000000000000000000
+    TimeLineAppearance.LeftFont.Size = 18.000000000000000000
+    TimeLineAppearance.RightFont.Size = 18.000000000000000000
+    TimeLineAppearance.LeftSubUnitFontSize = 14.000000000000000000
+    TimeLineAppearance.RightSubUnitFontSize = 14.000000000000000000
+    ItemsAppearance.Gap = 10.000000000000000000
+    ItemsAppearance.MoveAreaSize = 4.000000000000000000
+    ItemsAppearance.SizeAreaSize = 4.000000000000000000
+    ItemsAppearance.DeleteAreaSize = 16.000000000000000000
+    ItemsAppearance.DeleteHandlerBitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      042C49444154785EED9B3F4C13511CC769A1B6D58A44C5104D4C58089088A404
+      0C1125266A627070D344E2C0A0938B2E460765D245078D0389B2C8A09B832C6A
+      3428C6D886A6C1040D210E46C560056914A814EAF7DD7D697AEDF57AD82BA5B9
+      F7495E7EEFF7EBDDFBF3ED7BBF7B85D6515660FCC0E1709C43B50B65274AAE3E
+      1328DF50061389445F0828D1025130013A3B3B3DD168F48ED3E9EC81EB54A3AB
+      6619F45756569E1F1A1A5A60CC520A22406363A3CFEBF53E45B55D8DE4CDDBF9
+      F9F9A3636363BFE95BC6FFBE338660F2FD30564D5ED0CE362DC7F215802DDF85
+      3DFF84AEA520271C474A18A46B098558019769531189ED2E4A83CFE7F36239BB
+      F58A784D5CC36BC53DE9E8B59D1796AE80D6D6D61A24ADAFA8A60BDB3B323272
+      8D7553B4B4B488EBAFAA5E926524D55DC160F03BFDBCB1740560F27E98F43667
+      666767AFB36E1ADE33A37A499CECC3322C15007BBF86D524D8B7EF2726266274
+      4D23EE11F7D24DA2D7473E98DA02CDCDCDD5E5E5E5DBE81A710A45B36C318957
+      3C08AD1A7110C2BD07E9AED08BF250AD66676969E967381CFE41372B8602E079
+      BEC1ED763FC2BE3BC1504981EDF238168B9DC4F9E12F4319186E013C7BCF96EA
+      E40562EC620E74753114000AEE65B564C935074301A06039AB254BAE3964E400
+      3C7F5D30FB441DEA5D4203E2535CC982390C620E37E8BEC379649175053D01B6
+      C3E4CC9E254A350488B0AE60E939A0149102D0DA968C1CD0D6D6568953D4005D
+      0524121F12C921BA0A884D23F6866E4E70AAAB40F1A0BA498D64E50F4E7F0B28
+      71FA39C158F6632C5BE92A20F61231CD1F50709AED0E040251BA0AA68EC2488C
+      F5301F544F05220DE3A879806E51C151FD3526D74177850624BC8FAC6745E600
+      5ADB229320AD21667300AEDB8DE47598AE0212DF38F6E2305D05BFDFBF0709AA
+      95AE02925630140A693EFFA3BD0EB457475701ED3D477B9FE92AAC9B1C80C136
+      6380F7530BC2E2FF021A103F967E9D88F1E5547AD2AF137DF0354B903980D6B6
+      4801686D8B1480D6B64801686D8B1480D6B64801686D8B1480D6B64801686D8B
+      1480D6B64801686D8B1480D6B64801686D8B1480D6B64801686D8BA502CCCDCD
+      BD80113F784896442271055683DBEDBE07A3B98E310DBC57731DFBB00CF91519
+      5A431C0E47C6CF57D06105AB45476F2C7A63D6C3AC009A6F57927AAC8C8DAC17
+      0D8E41AC500D59C69C81290182C1E034F6E317BA2B5421F6A0A9A96907FD3547
+      F42DC6806A951A5111631563A66B88A91C20F0FBFD37A1EA05BAA92C835F8B8B
+      8BCBF4D70497CBE50462E2196F2204B8150A852ED235C4B400426D743A8EEA16
+      35B26E99C59B51373A3A3A45DF10D38F41D120943D1D89444C7F8373AD116313
+      63343B7981E915B00292CE11743280ED50B4BDAF07C634853175E3D1F78C2153
+      ACFA17219393939F6A6B6BFBE2F1F80C3ADC8C900F457C07B818FC420963F2B7
+      3D1ECF994020A039ABE4A6ACEC1F4D20B3232982D3850000000049454E44AE42
+      6082}
+    ItemsAppearance.SizeHandlerHeight = 30.000000000000000000
+    ItemsAppearance.SizeHandlerWidth = 50.000000000000000000
+    ItemsAppearance.DeleteHandlerHeight = 30.000000000000000000
+    ItemsAppearance.DeleteHandlerWidth = 30.000000000000000000
+    ItemsAppearance.SizeHandlerLeftBitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      030049444154785EDD9B4D8BD35014869B9BA65DFB016ED214C671C085CBE2C7
+      CA9D0CFE8259A9FFC45F200A2EDC8DB31A5C2B8AB81454A83B178203CEAEAE1C
+      6657DA34ADE78593418532B9B91FE7DE3E30949C8170DF2727B9376993740266
+      341AEDCCE7F3A7DD6E77974B672C168BE3344D0FE8EF703C1EFFE0B236297F06
+      07C24FA7D337BD5EEF2697FE412975214992BBCBE5F2729EE7DF2693C96FFE97
+      16410AE023FF96C26F73692D24E1868984E004D4E1A9EDAF72E95C4C2428FE0C
+      8236E16B48C25E55557BBCD998603AC0247C0D5D18AF1445F141A70B82E8001B
+      E1419665D775BB405C80ADF06D1115201D1E880908213C1011E02A3C9DFFA758
+      19F26623BC0B7079E4692A7CA1BB2CF62AC065F8B22C3FD17EF779B331DE6E86
+      5C86A7F9FF0B2D9B1FB4B929F22220D4F0C0B98090C303A702420F0F9C098821
+      3C70222096F0C0BA8098C203AB02620B0FAC0988313CB02220D6F0C05840CCE1
+      819180D8C383D60236213C68256053C203EDDB610EFF7A13C2032D01084F837C
+      42E177B8640D89F0404B001E392BA5EEF3A635A4C203EF8FC4FE47323C101520
+      1D1E88778034A202E8627A8B6694035C5CB9E41DF10E9096A0F5ED709EE7BF68
+      26D84A92C4EA606966C9CBB21C1545F1B1ED2F3DDAA22500831B0C065F69B0F7
+      68D097B86C052909264BE177D4BE5B5CB286EF99C1F466287A09366E87A39660
+      2400C42EC1781AC4E06890BB34D89F5CB206A6C8D96CF6D2E51469DC01352E3B
+      816687CFFD7EFFA18B4EB02600C428C1AA00109B04EB02404C129C0800B14870
+      2600C420C1A90010BA04E70240C812BC0800A14AF0F640048373B562CCB2EC36
+      AD18F721994B8DF1FA44C8B1843BB4DF47BCD9186FA7C0DFB83A1DAAAA3A4137
+      E89C0A22CF045D75429AA617A3795FC0E5E9A08398001082045101405A82B800
+      604B02AD07BE07FFBEC03A6C48A059E515F6C39B8D0846003091B05AAD0E758F
+      3E1059079C87EE3A81C33FD63DFA20A80EA8A93B8196B7475C5A8B497810E4CB
+      D3005F8F0D87C3F77461DB564A5DE3F219749A1C2749F28CC23F6F1BBED3E974
+      FE0091F6B22D343CAB840000000049454E44AE426082}
+    ItemsAppearance.SizeHandlerRightBitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      02F249444154785EDD9B318B134114C7B3BBD990747ADA84242B2A1C58580654
+      2C6C3DEF6AB9C6C36FE047F09B9C567E00D1B3154185D859081E5A2655C076B3
+      D9C5F78797E30AC17DB3333B6FF6074798777037FFDFCCECCE4E92A8D780F97C
+      BE5F96E531FD9CF4FBFD9B5CBE60BBDD9E0D0683178BC5E22797D4612C80C3BF
+      8CA2E8984BFF24CFF3F3D16874A855829180BAE177D04CF84533E140A304B100
+      69F81D5A25C4FC5A1BAC79697840D788DB9BCDE63D047249052201E83C8DE453
+      6E8AD128412400A39FA6E91D6E1AA14D827809D84093042F02801609DE04000D
+      12440292247943D7813FDCB4826F0909BFD662B95CAEC7E3F115BA0D3EE49215
+      E238DE2B8AE220CBB20FF81F5C6E05F112A0113BA5CE7EE6A6357CCD04E3AD30
+      75F63575FA1E97ACD1F68EB1D1C3501724180B005D90D04800085D4263012064
+      0956048050255813004294605500084D8275012024094E048050243813004290
+      E05400D02EC1B900A059422B02805609AD9D08A173D4C913EAEC572E5983A4E2
+      51FA2D2473A936A20391A6E0B023CBB24F4551CCE3389E72D90AF4F7AE956579
+      6B369B7D931CAAB42A00B8941045D17E5555EBD56AF5914BFFC5CBA1A8CBE520
+      C5DBA9B01609DE0468C19B0097B745095E0468090F5A17E0323CDD01DEE1CD1B
+      6ED6A2B59D2070BC1BC445F548BA1BECCA56F837857F6CB215EEC2C3907178E0
+      5C80E6F0C0A900EDE181B3BB00C2E779FE4A7378E06406ECC2A7697A9F4BD6B0
+      191E581710527860554068E18135012186075604841A1E3416107278D04840E8
+      E181B1802E84074602BA121E8877821CFEB40BE181580075F239857FC04D6BF8
+      080F444B00A35F14C5972449F6B864055FE1816806E0FB025D0A0F5A3F13BC8C
+      EFF0C09B000DE18117015AC20391001C39D345F007378DD0141E88BF2F30994C
+      AE4751F4884B22B48507E2B7C7A7D3E9AAAA2A48B8CBA55A680C0FC402300B48
+      C2778904ADE181D10724241268DB7C3E1C0E9F680C0F8C3F217249C29A364837
+      E238BECABFBA8046FE8CC23FD31ABED7EBF5FE021502BABCE2C0A7AE00000000
+      49454E44AE426082}
+    ItemsAppearance.SizeHandlerUpBitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      029F49444154785EED9A4D6ED350108063BF28216B88D8842C10ED0A56510467
+      E0E700AC802B70024E8054A93D40C5A20700C401408094250BA422C42EACCAAE
+      8AF2638779D64C95405AE2E79979AE986FE378DCD8EFFB6A4B51948661188661
+      188661FC9F24B85563381CEE6659F61877D770CE1D8D46A363DC55413580975F
+      2C162FD3347D80A335F23C7FDB6C369F6B46500BE0E567B3D96B10DCC5D14620
+      D071ABD57AA415412500CABF03F99B38BA1088F01D22DCD788201EA0AC3CA115
+      413440A83CA111412C405579423A8248002E794232027B006E79422A026B0029
+      794222025B006979823B024B002D79823342E500DAF20457844A0162C9131C11
+      8203C49627AA46080A501779A24A84D201EA264F84462815A0AEF2444884AD03
+      D45D9E281B61AB0097459E2813E19F0124E561A19FFD16CE7DAF1830B26D840B
+      0348CBC3029FF8D7708DC35811CE0DA0214F0BC36B4589B03180A63C112BC25F
+      0162C8133122AC0588294F6847380B50077942334211A04EF2845684C45F6832
+      99BC69B7DB3B789C8D50794232C2743AFDD6E9741EBA6EB7FB0A167917E76CCC
+      E7F34F10F569A8BC673C1E9FF4FBFDF770AE619AA63D1CB30051AFC2796F2583
+      C16089333638E45791BC1352DCB2C12DEFF1E7F28F927FA470C4066B00097942
+      2A025B0049794222024B000D79823B420A27FA81AF83D09427B82278F7D43977
+      88FBA589214F7044F0EEAED7EBFDCCF3FC5A92247770BE1531E5892A9F1396CB
+      E51104D877FE2410E14B99087590274222A0FC0BBF7EE7076522C0853E82FCB3
+      3AC81314013E2C0D40EC068E37B22AEFF78B009E950827F05C5D873FEAE2A182
+      2CCB7EC1660F9EBBB337D7098CF001D6790A0EB7E16EB882870AE01FF7156607
+      FEB65F5DFFB9DF08FDF9634678A3FA8F1843B9ECEB370CC3300CC3300C711A8D
+      DFC418C661B56BABD70000000049454E44AE426082}
+    ItemsAppearance.SizeHandlerDownBitmap.PNG = {
+      89504E470D0A1A0A0000000D4948445200000040000000400806000000AA6971
+      DE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+      02B149444154785EED9ABF6ED3501487633B4E5690509421B8A20312031B9180
+      378017404CD08DA1483C429F832530553C00AAC48A84903232208158B3953D7F
+      EC707ED635AA5B97F8CF39F7DE88F30D8D7DD324E7FB1257B5E29EA2288AA228
+      8AA2FC9F04E6B6C4743ABD9BA6E973B39B1345D1E97C3EFF6176BDA6C9FCA500
+      C503379BCDB3388EEF99E51C5AFF1D04C1DB7EBF3FF33504E6A7D98FB6DBED2B
+      12BE619673D6EBF5779AFDC3E5107F0318F913922C95BB0C3DD197E17078E45B
+      04CCBF5C2E67F4C63D364B95509C538A7052CC1FE1475D79400FBEBD5AAD1E24
+      49F279B1589C9B65A7607E9AE93DC93F324BD7428EF7B32CBB35994CBE61FEA8
+      897C814F110A79FA783F344B3BB918211A8FC7C7B4F0DADC571B1F22B4912F30
+      11CEA3D168340BC3F0A6596F84CB085DE40BE8937F10D213DC31FBADC071477F
+      7CDE6120B3240E873C807B68B63B613302977C014B00602302B73C600B002423
+      48C803D600402282943C08E95FC733B3CD0667044979B88783C1E00D0DFBD3AC
+      B1810818BC4B04497938C33D3F17302F74462F7498DFCB0855FE4A2FF4A2E9B9
+      83F03BFF8B667A8A994A2743BE44B0258FFD2BA7C3AE23D89407A500C06504DB
+      F2E04A00E022820B79501900D88CE04A1E5C1B00D888806D57F2E09F01807404
+      DCBA92073B0300C90812D49507B502807D89D0441ED40E007C8FD0541E340A00
+      7C8DD0461E340E007C8BD0561EB40A007C89D0451EB40E005C47E82A0F3A0500
+      AE2270C883CE0180ED085CF2802500B01581531EB00500D211B8E5016B002015
+      41421EB00700DC11A4E4814800C01541521E8805005D2348CB03D100A06D041B
+      F2403C00681AC1963C60FF6EB00A8890D01312DB2984DFB1250FF28BA46C802B
+      489224F994A6E9611004955F976559F6318EE397B6E4819543E022381C2842E5
+      0559D11E5D8CA9288AA2288AA2287B4DAFF7072DD0905C8529B99D0000000049
+      454E44AE426082}
+    ItemsAppearance.LinkStroke.Thickness = 2.000000000000000000
+    ItemsAppearance.LinkArrowSize = 7.000000000000000000
+    ItemsAppearance.TitleFont.Size = 16.000000000000000000
+    ItemsAppearance.TitleFont.StyleExt = {00070000000000000004000000}
+    ItemsAppearance.SelectedTitleFont.Size = 16.000000000000000000
+    ItemsAppearance.SelectedTitleFont.StyleExt = {00070000000000000004000000}
+    ItemsAppearance.ActiveTitleFont.Size = 16.000000000000000000
+    ItemsAppearance.ActiveTitleFont.StyleExt = {00070000000000000004000000}
+    ItemsAppearance.DisabledTitleFont.Size = 16.000000000000000000
+    ItemsAppearance.DisabledTitleFont.StyleExt = {00070000000000000004000000}
+    Version = '1.2.2.6'
+    OnGetPositionText = Planner1GetPositionText
+    OnAfterSelectItem = Planner1AfterSelectItem
+  end
+  object ListView1: TListView
+    ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+    ItemEditAppearanceClassName = 'TEmptyItemObjects'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    Align = Client
+    Size.Width = 375.000000000000000000
+    Size.Height = 170.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    ItemAppearanceObjects.FooterObjects.Text.Width = 49.000000000000000000
+    ItemAppearanceObjects.FooterObjects.Text.Height = 24.000000000000000000
+    ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.X = 142.000000000000000000
+    CanSwipeDelete = False
+    OnItemClick = ListView1ItemClick
+    ControlType = Platform
+    object Timer1: TTimer
+      Enabled = False
+      Interval = 1
+      OnTimer = Timer1Timer
+      Left = 200
+      Top = 272
+    end
+  end
+  object Layout_JC: TLayout
+    Align = Top
+    Position.Y = 80.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    object Label2: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 85.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #51089'  '#49457'  '#51088
+      TabOrder = 0
+    end
+    object RadioBtn_Boss: TRadioButton
+      Align = Left
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 85.000000000000000000
+      Size.Width = 121.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = #48376#48512#51109'('#49324#50629#48512#51109')'
+      TextSettings.Font.Size = 11.000000000000000000
+      OnClick = RadioBtnClick
+    end
+    object RadioBtn_Team: TRadioButton
+      Align = Left
+      StyledSettings = [Family, Style, FontColor]
+      Position.X = 206.000000000000000000
+      Size.Width = 64.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = #54016#51109
+      TextSettings.Font.Size = 11.000000000000000000
+      OnClick = RadioBtnClick
+    end
+    object RadioBtn_All: TRadioButton
+      Align = Client
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 105.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = #51204#51649#50896
+      TextSettings.Font.Size = 11.000000000000000000
+      OnClick = RadioBtnClick
+    end
+  end
+  object Layout_Sort: TLayout
+    Align = Top
+    Position.Y = 113.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    object Label3: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 85.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #51312#54924#49692#49436
+      TabOrder = 0
+    end
+    object cboSort: TComboBox
+      Align = Client
+      Items.Strings = (
+        #51068#51088
+        #49457#47749
+        #48512#49436)
+      ItemIndex = 0
+      Size.Width = 290.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+    end
+  end
+  object Layout_Keyword: TLayout
+    Align = Top
+    Position.Y = 179.000000000000000000
+    Size.Width = 375.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    ParentShowHint = False
+    ShowHint = False
+    TabOrder = 13
+    object Label1: TLabel
+      Align = Left
+      StyledSettings = [Family, Style]
+      Size.Width = 85.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claGray
+      TextSettings.HorzAlign = Center
+      Text = #44160#49353#51312#44148
+      TabOrder = 0
+    end
+    object edtKeyword: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      TabOrder = 1
+      TextSettings.Font.Size = 13.000000000000000000
+      TextSettings.FontColor = claDodgerblue
+      HelpType = htKeyword
+      Size.Width = 290.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = #44160#49353#50612#47484' '#51077#47141#54616#49464#50836
+      StyledSettings = [Family, Style]
+      ParentShowHint = False
+      ShowHint = False
+    end
+  end
+  object AniIndicator1: TAniIndicator
+    Align = Client
+    Size.Width = 375.000000000000000000
+    Size.Height = 170.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object GestureManager1: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 152
+    Top = 433
+    GestureData = <
+      item
+        Control = Planner1
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end
+      item
+        Control = Owner
+        Collection = <
+          item
+            GestureID = sgiLeft
+          end
+          item
+            GestureID = sgiRight
+          end>
+      end>
+  end
+end

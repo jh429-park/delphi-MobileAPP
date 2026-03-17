@@ -1,0 +1,92 @@
+inherited frmCom_MasterDetail02_LgXhdpiPh: TfrmCom_MasterDetail02_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited HeaderToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited btnQuery: TButton
+      Position.X = 402.000000000000000000
+    end
+    inherited Label_Title: TLabel
+      Size.Width = 440.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Layout_Master: TLayout
+    Size.Width = 450.000000000000000000
+    Size.Height = 615.000000000000000000
+    inherited ListView_List: TListView
+      Size.Width = 450.000000000000000000
+      Size.Height = 615.000000000000000000
+    end
+  end
+  inherited Layout_Combo: TLayout
+    Size.Width = 450.000000000000000000
+    inherited ComboBox_Sel: TComboBox
+      Size.Width = 385.000000000000000000
+    end
+    inherited Label1: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited MultiView_Detail: TMultiView
+    Size.Height = 50.000000000000000000
+    inherited Layout_Detail_Memo: TLayout
+      Size.Height = 50.000000000000000000
+      inherited Memo_Body: TMemo
+        Size.Height = 0.000000000000000000
+        Viewport.Width = 250.000000000000000000
+        Viewport.Height = 0.000000000000000000
+      end
+      inherited Text_Detail_Bottom: TText
+        Position.Y = 22.000000000000000000
+        TextSettings.Font.Size = 14.000000000000000000
+      end
+    end
+    inherited Layout_Detail_ListView: TLayout
+      Size.Height = 50.000000000000000000
+      inherited Layout_Detail_Body: TLayout
+        Size.Height = 0.000000000000000000
+        inherited TabControl_Detail: TTabControl
+          Sizes = (
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s
+            250s
+            24s)
+          inherited TabItem0: TTabItem
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem1: TTabItem
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem2: TTabItem
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem3: TTabItem
+            ExplicitSize.cx = 56.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+          inherited TabItem4: TTabItem
+            ExplicitSize.cx = 44.000000000000000000
+            ExplicitSize.cy = 26.000000000000000000
+          end
+        end
+        inherited ListView_Detail_Body: TListView
+          Size.Height = 0.000000000000000000
+        end
+        inherited Button_Document: TButton
+          Position.Y = -44.000000000000000000
+        end
+      end
+    end
+  end
+end

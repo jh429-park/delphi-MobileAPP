@@ -1,0 +1,91 @@
+inherited frmCom_RentCar_Detail_LgXhdpiPh: TfrmCom_RentCar_Detail_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 3
+  inherited HeaderToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited btnQuery: TButton
+      Position.X = 402.000000000000000000
+    end
+    inherited Label_Title: TLabel
+      Size.Width = 440.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Layout_Combo: TLayout
+    Size.Width = 450.000000000000000000
+  end
+  inherited Layout_Detail: TLayout
+    Size.Width = 444.000000000000000000
+    inherited Layout_Data: TLayout
+      Size.Width = 368.000000000000000000
+      inherited edtWhy: TEdit
+        Size.Width = 368.000000000000000000
+      end
+      inherited edtWhere: TEdit
+        Size.Width = 368.000000000000000000
+      end
+      inherited Layout_YesNo: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtMEMO_OK: TEdit
+          Size.Width = 249.000000000000000000
+        end
+      end
+      inherited edtMemo: TEdit
+        Size.Width = 368.000000000000000000
+      end
+      inherited edtWho: TEdit
+        Size.Width = 368.000000000000000000
+      end
+      inherited Layout4: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtDateFr: TDateEdit
+          Size.Width = 268.000000000000000000
+        end
+        inherited edtTimeFr: TTimeEdit
+          Position.X = 268.000000000000000000
+        end
+      end
+      inherited Layout5: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtDateTo: TDateEdit
+          Size.Width = 268.000000000000000000
+        end
+        inherited edtTimeTo: TTimeEdit
+          Position.X = 268.000000000000000000
+        end
+      end
+      inherited Layout7: TLayout
+        Size.Width = 368.000000000000000000
+        inherited edtCompany: TEdit
+          Position.X = 254.000000000000000000
+        end
+        inherited edtEmpNo: TEdit
+          Position.X = 254.000000000000000000
+        end
+        inherited edtSeq: TEdit
+          Position.X = 308.000000000000000000
+        end
+        inherited edtName: TEdit
+          Size.Width = 308.000000000000000000
+        end
+      end
+      inherited edtCarNo: TComboBox
+        Size.Width = 368.000000000000000000
+      end
+    end
+    inherited Layout_Ok: TLayout
+      Size.Width = 444.000000000000000000
+      inherited Button_Yes: TButton
+        Size.Width = 174.000000000000000000
+      end
+      inherited Button_No: TButton
+        Position.X = 326.000000000000000000
+      end
+    end
+  end
+  inherited Button_New: TButton
+    Position.Y = 654.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+end

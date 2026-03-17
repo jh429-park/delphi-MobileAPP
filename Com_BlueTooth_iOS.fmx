@@ -1,0 +1,67 @@
+object frmCom_BlueTooth_iOS: TfrmCom_BlueTooth_iOS
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 301
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    Align = Top
+    Size.Width = 301.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'BluetoothLE1.DiscoverDevices(1000, [BleSerialService])'
+    TextSettings.HorzAlign = Leading
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Align = Top
+    Position.Y = 37.000000000000000000
+    Size.Width = 301.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'fBleSerialDevice.IsConnected'
+    TextSettings.HorzAlign = Leading
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Align = Top
+    Position.Y = 74.000000000000000000
+    Size.Width = 301.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'fBleSerialDevice.Disconnect'
+    TextSettings.HorzAlign = Leading
+    OnClick = Button3Click
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Align = Client
+    Size.Width = 301.000000000000000000
+    Size.Height = 369.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 297.000000000000000000
+    Viewport.Height = 365.000000000000000000
+  end
+  object BluetoothLE1: TBluetoothLE
+    Enabled = False
+    OnCharacteristicRead = BluetoothLE1CharacteristicRead
+    OnConnectedDevice = BluetoothLE1ConnectedDevice
+    OnConnect = BluetoothLE1Connect
+    OnDiscoverLEDevice = BluetoothLE1DiscoverLEDevice
+    OnServicesDiscovered = BluetoothLE1ServicesDiscovered
+    OnEndDiscoverDevices = BluetoothLE1EndDiscoverDevices
+    Left = 80
+    Top = 160
+  end
+end

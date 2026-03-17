@@ -1,0 +1,334 @@
+object frmCom_Marketing_Customer: TfrmCom_Marketing_Customer
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 633
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 3
+  object HeaderToolBar: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnQuery: TButton
+      Align = Right
+      Margins.Right = 10.000000000000000000
+      Position.X = 326.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 1
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 374.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 2
+    end
+    object btnClose: TButton
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+  end
+  object Layout_Chart: TLayout
+    Align = Bottom
+    Margins.Top = 1.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.Y = 398.000000000000000000
+    Size.Width = 374.000000000000000000
+    Size.Height = 235.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Chart1: TChart
+      Foot.Font.StyleExt = {00040000000200000004000000}
+      Foot.Visible = False
+      LeftWall.Brush.Color = x000D0C0C
+      LeftWall.Color = xFFF5F58B
+      LeftWall.Dark3D = False
+      LeftWall.Pen.Visible = False
+      LeftWall.Visible = False
+      Legend.Alignment = laTop
+      Legend.CheckBoxesStyle = cbsRadio
+      Legend.DividingLines.Color = x00FFFFFF
+      Legend.DividingLines.Fill.Color = x00FFFFFF
+      Legend.Font.Size = 4.578313350677490000
+      Legend.LegendStyle = lsSeries
+      Legend.Title.Font.StyleExt = {00070000000000000004000000}
+      MarginBottom = 0
+      MarginLeft = 0
+      MarginRight = 0
+      MarginTop = 0
+      SubFoot.Font.StyleExt = {00040000000200000004000000}
+      Title.Text.Strings = (
+        '-')
+      Title.Visible = False
+      OnClickSeries = Chart1ClickSeries
+      BottomAxis.LabelsFormat.Font.Size = 4.578313350677490000
+      BottomAxis.LabelsFormat.Font.Color = xFFFAE986
+      BottomAxis.LabelsFormat.Font.Brush.Color = xFFFAE986
+      BottomAxis.Title.Font.Color = xFFF0D6A6
+      BottomAxis.Title.Font.Brush.Color = xFFF0D6A6
+      Chart3DPercent = 8
+      LeftAxis.LabelsFormat.Font.Size = 4.578313350677490000
+      LeftAxis.LabelsFormat.Font.Color = xFFF5F53D
+      LeftAxis.LabelsFormat.Font.Brush.Color = xFFF5F53D
+      Panning.MouseWheel = pmwNone
+      View3D = False
+      View3DOptions.FontZoom = 114
+      Zoom.Animated = True
+      Zoom.Brush.Kind = None
+      Zoom.Pen.Fill.Color = claSilver
+      Zoom.Pen.Visible = False
+      Align = Client
+      BevelWidth = 2
+      BorderWidth = 2
+      Color = x000D0C0C
+      TabOrder = 0
+      Opacity = 0.000000000000000000
+      Size.Width = 374.000000000000000000
+      Size.Height = 235.000000000000000000
+      Size.PlatformDefault = False
+      ColorPaletteIndex = 18
+      object Series1: TBarSeries
+        Marks.Arrow.Visible = False
+        Marks.Callout.Arrow.Visible = False
+        BarStyle = bsBevel
+        XValues.Name = 'X'
+        XValues.Order = loNone
+        YValues.Name = 'Bar'
+        YValues.Order = loNone
+      end
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Position.Y = 48.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 36.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    object cboYear: TComboBox
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Position.X = 167.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 56.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      OnClosePopup = ComboBoxChange
+    end
+    object cboMonth: TComboBox
+      Align = Left
+      Position.X = 223.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 39.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+    end
+    object cbxFM: TCheckBox
+      Align = Right
+      StyledSettings = [Family, Style, FontColor]
+      IsChecked = True
+      Position.X = 286.000000000000000000
+      Size.Width = 98.000000000000000000
+      Size.Height = 36.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = 'FM'#47588#52636#54252#54632
+      OnClick = ComboBoxChange
+    end
+    object cboCompany: TComboBox
+      Align = Left
+      Margins.Left = 5.000000000000000000
+      Position.X = 5.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 157.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      OnChange = ComboBoxChange
+      OnClosePopup = ComboBoxChange
+    end
+  end
+  object Layout2: TLayout
+    Align = Bottom
+    Position.Y = 379.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 18.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Text2: TText
+      Align = Right
+      Margins.Right = 5.000000000000000000
+      Position.X = 313.000000000000000000
+      Size.Width = 66.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      Text = '('#45800#50948':'#52380#50896')'
+      TextSettings.FontColor = claOlive
+      TextSettings.HorzAlign = Trailing
+    end
+    object Text1: TText
+      Align = Client
+      Margins.Right = 5.000000000000000000
+      Size.Width = 308.000000000000000000
+      Size.Height = 18.000000000000000000
+      Size.PlatformDefault = False
+      Text = '   * '#52572#44540'3'#45380' '#51060#53448' '#46608#45716' '#49888#44508#44144#47000' '#44256#44061#54788#54889#51077#45768#45796'.'
+      TextSettings.FontColor = claPurple
+      TextSettings.HorzAlign = Leading
+    end
+  end
+  object TMSFMXGrid1: TTMSFMXGrid
+    Align = Client
+    DisableFocusEffect = False
+    TabOrder = 0
+    Size.Width = 384.000000000000000000
+    Size.Height = 295.000000000000000000
+    Size.PlatformDefault = False
+    ColumnCount = 3
+    RowCount = 5
+    SelectionMode = smSingleRow
+    Options.Editing.CalcFormat = '%g'
+    Options.Grouping.CalcFormat = '%g'
+    Options.Grouping.GroupCountFormat = '(%d)'
+    Options.IO.XMLEncoding = 'ISO-8859-1'
+    Options.Mouse.TouchScrollingSensitivity = 0.100000001490116100
+    Options.Printing.PageNumberFormat = '%g'
+    Version = '2.3.3.0'
+    Fill.Kind = Solid
+    Stroke.Kind = Solid
+    TopRow = 1
+    LeftCol = 2
+    FreezeColumns = 1
+    OnGetCellAppearance = TMSFMXGrid1GetCellAppearance
+    Columns = <
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        Name = 'index'
+        Width = 25.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Name = 'color'
+        ReadOnly = True
+        Width = 10.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etNumericEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Name = 'name'
+        ReadOnly = True
+        Width = 130.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        Name = 'value0'
+        ReadOnly = True
+        Width = 85.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        Name = 'value1'
+        ReadOnly = True
+        Width = 85.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        HorzAlignment = Trailing
+        ID = ''
+        Name = 'per'
+        ReadOnly = True
+        Width = 50.000000000000000000
+      end
+      item
+        Color = claNull
+        Editor = etEdit
+        Fixed = False
+        FixedFont.StyleExt = {00070000000000000004000000}
+        FixedFontColor = claBlack
+        FontColor = claBlack
+        ID = ''
+        Name = 'memo'
+        ReadOnly = True
+        Width = 68.000000000000000000
+      end>
+    object DateEdit_Fr: TDateEdit
+      Date = 43726.000000000000000000
+      Position.X = 138.000000000000000000
+      Position.Y = 2.000000000000000000
+      Size.Width = 110.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Visible = False
+    end
+  end
+end

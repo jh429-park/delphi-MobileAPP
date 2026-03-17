@@ -1,0 +1,157 @@
+object frmCom_Memo: TfrmCom_Memo
+  Left = 0
+  Top = 0
+  BorderStyle = None
+  Caption = 'Form1'
+  ClientHeight = 609
+  ClientWidth = 366
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object HeaderToolBar: TToolBar
+    Align = MostTop
+    Padding.Left = 10.000000000000000000
+    Padding.Right = 10.000000000000000000
+    Size.Width = 366.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label_Title: TLabel
+      Align = Contents
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Margins.Left = 5.000000000000000000
+      Margins.Top = 5.000000000000000000
+      Margins.Right = 5.000000000000000000
+      Margins.Bottom = 5.000000000000000000
+      Size.Width = 356.000000000000000000
+      Size.Height = 38.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      Text = 'memo'
+      TabOrder = 1
+    end
+    object btnQuery: TButton
+      Align = Right
+      Position.X = 308.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'refreshtoolbutton'
+      TabOrder = 0
+      Text = 'MenuBTN'
+      OnClick = btnQueryClick
+    end
+    object btnClose: TButton
+      Align = Left
+      Position.X = 10.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'priortoolbutton'
+      TabOrder = 2
+      Text = 'MenuBTN'
+      OnClick = btnCloseClick
+    end
+  end
+  object Memo: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    ReadOnly = True
+    StyledSettings = [Family, Style, FontColor]
+    TextSettings.Font.Size = 14.000000000000000000
+    TextSettings.WordWrap = True
+    Align = Client
+    Size.Width = 366.000000000000000000
+    Size.Height = 453.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Viewport.Width = 366.000000000000000000
+    Viewport.Height = 453.000000000000000000
+  end
+  object Layout1: TLayout
+    Align = MostBottom
+    Margins.Left = 10.000000000000000000
+    Margins.Right = 10.000000000000000000
+    Position.X = 10.000000000000000000
+    Position.Y = 566.000000000000000000
+    Size.Width = 346.000000000000000000
+    Size.Height = 43.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object Label_Bottom: TLabel
+      Align = Left
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Position.X = 35.000000000000000000
+      Size.Width = 126.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 2
+    end
+    object Image_Detail: TImageControl
+      Align = MostLeft
+      EnableOpenDialog = False
+      Size.Width = 35.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnClick = Image_DetailClick
+      object FloatAnimation1: TFloatAnimation
+        AnimationType = InOut
+        Duration = 2.000000000000000000
+        Inverse = True
+        Loop = True
+        PropertyName = 'Opacity'
+        StartValue = 1.000000000000000000
+        StopValue = 0.500000000000000000
+      end
+    end
+    object Label_DateTime: TLabel
+      Align = Client
+      StyledSettings = [Family, Size]
+      Opacity = 0.899999976158142100
+      Size.Width = 185.000000000000000000
+      Size.Height = 43.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claSlategray
+      TextSettings.HorzAlign = Center
+      TabOrder = 1
+    end
+  end
+  object Label_Top: TLabel
+    Align = MostTop
+    StyledSettings = [Family, Size]
+    Opacity = 0.899999976158142100
+    Margins.Left = 5.000000000000000000
+    Margins.Right = 5.000000000000000000
+    Position.X = 5.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 356.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'toollabel'
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claSlategray
+    TabOrder = 0
+  end
+  object Text_Url: TText
+    Align = Top
+    Position.Y = 92.000000000000000000
+    Size.Width = 366.000000000000000000
+    Size.Height = 21.000000000000000000
+    Size.PlatformDefault = False
+  end
+end
